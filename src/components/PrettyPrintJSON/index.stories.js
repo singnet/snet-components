@@ -7,11 +7,11 @@ import PrettyPrintJson from "./";
 const sampleList = ["completed", "active", "idle"];
 
 storiesOf("Addons|PrettyPrintJson", module)
-  .addParameters({ props: { propTables: [PrettyPrintJson] } })
-  .addDecorator(withLiveEditScope({ React, PrettyPrintJson, sampleList }))
-  .addLiveSource(
-    "live source",
-    `return <PrettyPrintJson 
+    .addParameters({ props: { propTables: [PrettyPrintJson] } })
+    .addDecorator(withLiveEditScope({ React, PrettyPrintJson, sampleList }))
+    .addLiveSource(
+        "live source",
+        `return <PrettyPrintJson 
             data={
               {"menu": {
                  "id": "file",
@@ -25,4 +25,4 @@ storiesOf("Addons|PrettyPrintJson", module)
               }}}
             } 
      />`
-  );
+    );

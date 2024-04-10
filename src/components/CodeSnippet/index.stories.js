@@ -9,11 +9,13 @@ import ValueString from "./ValueString";
 import ValueNumber from "./ValueNumber";
 
 storiesOf("Code Snippet | Snippet", module)
-  .addParameters({ props: { propTables: [CodeSnippet] } })
-  .addDecorator(withLiveEditScope({ React, CodeSnippet, Function, Key, ValueNumber, ValueString }))
-  .addLiveSource(
-    "live source",
-    `return (
+    .addParameters({ props: { propTables: [CodeSnippet] } })
+    .addDecorator(
+        withLiveEditScope({ React, CodeSnippet, Function, Key, ValueNumber, ValueString })
+    )
+    .addLiveSource(
+        "live source",
+        `return (
     	<CodeSnippet> 
           const <Function text="acitveWallets" />  = () => [
           <br />
@@ -28,4 +30,4 @@ storiesOf("Code Snippet | Snippet", module)
           ]
       </CodeSnippet>
      )`
-  );
+    );

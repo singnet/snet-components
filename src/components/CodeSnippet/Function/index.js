@@ -1,10 +1,10 @@
 import React from "react";
-import { withStyles } from "@material-ui/styles";
+import { withStyles } from "@mui/styles";
 
 import { useStyles } from "./styles";
 
-const FunctionText = ({ classes, text }) => {
-  return <span className={classes.functionTextContainer}>{text}</span>;
+const Function = ({ classes, text }) => {
+    return <span className={classes.functionTextContainer}>{text}</span>;
 };
 
-export default withStyles(useStyles)(FunctionText);
+export default withStyles(useStyles)(Function);

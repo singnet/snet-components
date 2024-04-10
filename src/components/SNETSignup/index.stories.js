@@ -6,11 +6,11 @@ import { BrowserRouter as ReactRouter } from "react-router-dom";
 import SNETSignup from "./";
 
 storiesOf("Auth|SNETSignup", module)
-  .addParameters({ props: { propTables: [SNETSignup] } })
-  .addDecorator(withLiveEditScope({ React, SNETSignup, ReactRouter }))
-  .addLiveSource(
-    "live source",
-    `return   <ReactRouter>
+    .addParameters({ props: { propTables: [SNETSignup] } })
+    .addDecorator(withLiveEditScope({ React, SNETSignup, ReactRouter }))
+    .addLiveSource(
+        "live source",
+        `return   <ReactRouter>
                 <SNETSignup 
                   info={{
                     title:"SingularityNet",
@@ -24,4 +24,4 @@ storiesOf("Auth|SNETSignup", module)
                     list:["aaa","bbb"]}}
                    onSubmit={console.log}/>  
               </ReactRouter>`
-  );
+    );

@@ -5,11 +5,11 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import SNETPagination from "./";
 
 storiesOf("SNETPagination", module)
-  .addParameters({ props: { propTables: [SNETPagination] } })
-  .addDecorator(withLiveEditScope({ React, SNETPagination }))
-  .addLiveSource(
-    "live source",
-    `return   <SNETPagination limit={10}
+    .addParameters({ props: { propTables: [SNETPagination] } })
+    .addDecorator(withLiveEditScope({ React, SNETPagination }))
+    .addLiveSource(
+        "live source",
+        `return   <SNETPagination limit={10}
                 offset={10}
                 totalCount={100}
                 itemsPerPageOptions={[{value:10, label:"Ten"}, {value:20, label:"Twenty"}, {value:30, label:"Thirty"}]}
@@ -17,4 +17,4 @@ storiesOf("SNETPagination", module)
                 onItemsPerPageChange={console.log}
                 onPageChange={console.log}
               />`
-  );
+    );

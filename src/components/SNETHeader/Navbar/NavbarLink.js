@@ -4,32 +4,32 @@ import { NavLink } from "react-router-dom";
 
 import { useStyles } from "./styles";
 
-const NavbarLink = props => {
-  const { activeLinks, label, openInNewTab, to } = props;
-  const classes = useStyles();
+const NavbarLink = (props) => {
+    const { activeLinks, label, openInNewTab, to } = props;
+    const classes = useStyles();
 
-  const isActive = (_unused, { pathname }) => {
-    return activeLinks.includes(pathname);
-  };
+    const isActive = (_unused, { pathname }) => {
+        return activeLinks.includes(pathname);
+    };
 
-  return (
-    <NavLink
-      children={label}
-      to={to}
-      isActive={isActive}
-      target={openInNewTab ? "_blank" : ""}
-      rel={openInNewTab ? "noreferrer noopener" : ""}
-      className={classes.navLink}
-      activeClassName={classes.navLinkActive}
-    />
-  );
+    return (
+        <NavLink
+            children={label}
+            to={to}
+            isActive={isActive}
+            target={openInNewTab ? "_blank" : ""}
+            rel={openInNewTab ? "noreferrer noopener" : ""}
+            className={classes.navLink}
+            activeClassName={classes.navLinkActive}
+        />
+    );
 };
 
 NavbarLink.propTypes = {
-  activeLinks: PropTypes.arrayOf(PropTypes.string),
-  label: PropTypes.string,
-  openInNewTab: PropTypes.bool,
-  to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    activeLinks: PropTypes.arrayOf(PropTypes.string),
+    label: PropTypes.string,
+    openInNewTab: PropTypes.bool,
+    to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
 export default NavbarLink;

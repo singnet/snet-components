@@ -5,6 +5,6 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import SNETImageUpload from "./";
 
 storiesOf("SNETImageUpload", module)
-  .addParameters({ props: { propTables: [SNETImageUpload] } })
-  .addDecorator(withLiveEditScope({ React, SNETImageUpload }))
-  .addLiveSource("live source", `return <SNETImageUpload  />`);
+    .addParameters({ props: { propTables: [SNETImageUpload] } })
+    .addDecorator(withLiveEditScope({ React, SNETImageUpload }))
+    .addLiveSource("live source", `return <SNETImageUpload  />`);

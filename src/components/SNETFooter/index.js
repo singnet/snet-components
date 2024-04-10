@@ -1,20 +1,20 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
-
-import PrimaryFooter from "./PrimaryFooter";
-import SecondaryFooter from "./SecondaryFooter";
+import { Box } from "@mui/material";
+import SnetFooterColumns from "./SnetFooterColumns";
+import SnetFooterCopyright from "./SnetFooterCopyright";
 import { useStyles } from "./styles";
 
-const Footer = ({ data }) => {
-  const classes = useStyles();
-  return (
-    <footer className={classes.footer}>
-      <Grid container spacing={24} className={classes.footerWrapper}>
-        <PrimaryFooter leftData={data.PrimaryFooterLeft} mainData={data.PrimaryFooterMain} />
-        <SecondaryFooter data={data.SecondaryFooter} />
-      </Grid>
-    </footer>
-  );
+const SnetFooter = () => {
+    const classes = useStyles();
+
+    return (
+        <Box className={classes.snetFooterContainer}>
+            <Box className={classes.snetFooter}>
+                <SnetFooterColumns />
+                <SnetFooterCopyright />
+            </Box>
+        </Box>
+    );
 };
 
-export default Footer;
+export default SnetFooter;

@@ -1,17 +1,16 @@
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles(theme => ({
-  pendingSection: {
-    display: "flex",
-    alignItems: "baseline",
-    justifyContent: "center",
-    marginBottom: 20,
-    color: theme.palette.text.orange,
-    fontWeight: 600,
-    "& span": {
-      "&::before": {
-        fontSize: 14,
-      },
+export const useStyles = makeStyles((theme) => ({
+    pendingSection: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: theme.palette.text.orange,
+        fontWeight: 600,
+        "& span": {
+            "&::before": {
+                fontSize: 14,
+            },
+        },
     },
-  },
 }));

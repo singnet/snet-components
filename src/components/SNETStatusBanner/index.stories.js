@@ -6,11 +6,18 @@ import SNETStatusBanner, { statusTitleType } from "./";
 import VerificationPendingImage from "../../assets/images/VerificationPending.png";
 
 storiesOf("SNETStatusBanner", module)
-  .addParameters({ props: { propTables: [SNETStatusBanner] } })
-  .addDecorator(withLiveEditScope({ React, SNETStatusBanner, VerificationPendingImage, statusTitleType }))
-  .addLiveSource(
-    "live source",
-    `return   <SNETStatusBanner 
+    .addParameters({ props: { propTables: [SNETStatusBanner] } })
+    .addDecorator(
+        withLiveEditScope({
+            React,
+            SNETStatusBanner,
+            VerificationPendingImage,
+            statusTitleType,
+        })
+    )
+    .addLiveSource(
+        "live source",
+        `return   <SNETStatusBanner 
                 title="Your AI service review is in progress…" 
                 type={statusTitleType.PENDING}
                 img={VerificationPendingImage}
@@ -24,4 +31,4 @@ storiesOf("SNETStatusBanner", module)
                 
               />  
               `
-  );
+    );

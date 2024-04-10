@@ -5,6 +5,6 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import SNETAppBar from "./";
 
 storiesOf("SNETAppBar", module)
-  .addParameters({ props: { propTables: [SNETAppBar] } })
-  .addDecorator(withLiveEditScope({ React, SNETAppBar }))
-  .addLiveSource("live source", `return <SNETAppBar color="white" />`);
+    .addParameters({ props: { propTables: [SNETAppBar] } })
+    .addDecorator(withLiveEditScope({ React, SNETAppBar }))
+    .addLiveSource("live source", `return <SNETAppBar color="white" />`);

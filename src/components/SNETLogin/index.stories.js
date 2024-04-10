@@ -6,12 +6,12 @@ import { BrowserRouter as ReactRouter } from "react-router-dom";
 import SNETLogin from "./";
 
 storiesOf("Auth|SNETLogin", module)
-  .addParameters({ props: { propTables: [SNETLogin] } })
-  .addDecorator(withLiveEditScope({ React, SNETLogin, ReactRouter }))
-  .addLiveSource(
-    "live source",
-    `return   <ReactRouter>
+    .addParameters({ props: { propTables: [SNETLogin] } })
+    .addDecorator(withLiveEditScope({ React, SNETLogin, ReactRouter }))
+    .addLiveSource(
+        "live source",
+        `return   <ReactRouter>
                 <SNETLogin title="SingularityNET" forgotPasswordLink="#" 
                 loginError="Username Password Error" onSubmit={console.log}/>  
               </ReactRouter>`
-  );
+    );

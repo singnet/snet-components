@@ -1,6 +1,6 @@
-export const useStyles = theme => ({
-  valueStringContainer: {
-    margin: 0,
-    color: "#5F8414",
-  },
+export const useStyles = () => ({
+    valueStringContainer: {
+        margin: 0,
+        color: "#5F8414",
+    },
 });

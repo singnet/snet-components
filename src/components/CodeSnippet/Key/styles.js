@@ -1,6 +1,6 @@
-export const useStyles = theme => ({
-  keyContainer: {
-    margin: 0,
-    color: "#AE324C",
-  },
+export const useStyles = () => ({
+    keyContainer: {
+        margin: 0,
+        color: "#AE324C",
+    },
 });

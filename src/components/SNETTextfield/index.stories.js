@@ -5,15 +5,14 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import SNETTextfield from "./";
 
 storiesOf("Form|SNETTextfield", module)
-  .addParameters({ props: { propTables: [SNETTextfield] } })
-  .addDecorator(withLiveEditScope({ React, SNETTextfield }))
-  .addLiveSource(
-    "live source",
-    `return <SNETTextfield 
+    .addParameters({ props: { propTables: [SNETTextfield] } })
+    .addDecorator(withLiveEditScope({ React, SNETTextfield }))
+    .addLiveSource(
+        "live source",
+        `return <SNETTextfield 
               label="label" 
               helperText="helper text"
               description="description"
               name="name"
-              icon
  />`
-  );
+    );

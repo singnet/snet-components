@@ -1,33 +1,40 @@
 import React from "react";
-import { withStyles } from "@material-ui/styles";
-import CloseIcon from "@material-ui/icons/Close";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import AnnoucementIcon from "../../assets/images/AnnoucementIcon.png";
+import { withStyles } from "@mui/styles";
+import CloseIcon from "@mui/icons-material/Close";
+import AnnoucementIcon from "shared/dist/assets/images/AnnoucementIcon.png";
 
 import { useStyles } from "./styles";
 
-const UpdateNotificationBar = ({ classes, showNotification, onCloseClick }) => {
-  if (!showNotification) return null;
-  return (
-    <div className={classes.parentUpdateNotificationBar}>
-      <div className={classes.updateNotificationBar}>
-        <img src={AnnoucementIcon} alt="Announcment" />
-        <p>
-          <span>SingularityNET Phase II has officially launched!!! Check your brand new AGIX balance on your wallets or use our </span>
-          <a
-            href="https://snapshot.singularitynet.io/"
-            title="SingularityNET Snapshot Tool"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            snapshot tool.
-            <ArrowForwardIosIcon />
-          </a>
-        </p>
-        <CloseIcon className={classes.closeIcon} onClick={onCloseClick} />
-      </div>
-    </div>
-  );
+const UpdateNotificationBar = ({
+    classes,
+    notificationText,
+    notificationLink,
+    showNotification,
+    onCloseClick,
+}) => {
+    return (
+        <div className={classes.parentUpdateNotificationBar}>
+            <div
+                className={`${classes.updateNotificationBar} ${
+                    !showNotification ? classes.hidenNotificatoinBar : classes.openNotificatoinBar
+                }`}
+            >
+                <img src={AnnoucementIcon} alt="Announcment" />
+                <p>
+                    <span>{notificationText}</span>
+                    <a
+                        href={notificationLink.link}
+                        title="SingularityNET Snapshot Tool"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        {notificationLink.text}
+                    </a>
+                </p>
+                <CloseIcon className={classes.closeIcon} onClick={onCloseClick} />
+            </div>
+        </div>
+    );
 };
 
 export default withStyles(useStyles)(UpdateNotificationBar);

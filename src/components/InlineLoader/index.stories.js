@@ -5,6 +5,6 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import InlineLoader from "./";
 
 storiesOf("InlineLoader", module)
-  .addParameters({ props: { propTables: [InlineLoader] } })
-  .addDecorator(withLiveEditScope({ React, InlineLoader }))
-  .addLiveSource("live source", `return <InlineLoader loading="true" />`);
+    .addParameters({ props: { propTables: [InlineLoader] } })
+    .addDecorator(withLiveEditScope({ React, InlineLoader }))
+    .addLiveSource("live source", `return <InlineLoader loading="true" />`);

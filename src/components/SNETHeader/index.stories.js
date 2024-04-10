@@ -4,14 +4,14 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import SNETHeader from "./";
 
 storiesOf("SNETHeader", module)
-  .addParameters({ props: { propTables: [SNETHeader] } })
-  .addDecorator(withLiveEditScope({ React, SNETHeader }))
-  .addLiveSource(
-    "live source",
-    `return <SNETHeader 
+    .addParameters({ props: { propTables: [SNETHeader] } })
+    .addDecorator(withLiveEditScope({ React, SNETHeader }))
+    .addLiveSource(
+        "live source",
+        `return <SNETHeader 
       isLoggedIn="true"
     onLogoClick={console.log}
     LoggedInActions={console.log}
     LoggedOutActions={console.log}
     />`
-  );
+    );

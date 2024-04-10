@@ -5,9 +5,9 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import SNETFileUpload from "./";
 
 storiesOf("SNETFileUpload", module)
-  .addParameters({ props: { propTables: [SNETFileUpload] } })
-  .addDecorator(withLiveEditScope({ React, SNETFileUpload }))
-  .addLiveSource(
-    "live source",
-    `return <SNETFileUpload onDrop={console.log} accept="image/jpeg" showFileDetails fileName="Sample File" fileSize={1000}/>`
-  );
+    .addParameters({ props: { propTables: [SNETFileUpload] } })
+    .addDecorator(withLiveEditScope({ React, SNETFileUpload }))
+    .addLiveSource(
+        "live source",
+        `return <SNETFileUpload onDrop={console.log} accept="image/jpeg" showFileDetails fileName="Sample File" fileSize={1000}/>`
+    );

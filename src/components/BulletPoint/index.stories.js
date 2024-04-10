@@ -5,9 +5,9 @@ import BulletPoint from ".";
 import { alertTypes } from "shared/dist/components/AlertBox";
 
 storiesOf("Bullet Point", module)
-  .addParameters({
-    props: {
-      propTables: [BulletPoint],
-    },
-  })
-  .add("_default", () => <BulletPoint type={alertTypes.WARNING} message="Sample Message" />);
+    .addParameters({
+        props: {
+            propTables: [BulletPoint],
+        },
+    })
+    .add("_default", () => <BulletPoint type={alertTypes.WARNING} message="Sample Message" />);

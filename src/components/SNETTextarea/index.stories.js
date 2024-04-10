@@ -5,11 +5,11 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import SNETTextarea from "./";
 
 storiesOf("Form|SNETTextarea", module)
-  .addParameters({ props: { propTables: [SNETTextarea] } })
-  .addDecorator(withLiveEditScope({ React, SNETTextarea }))
-  .addLiveSource(
-    "live source",
-    `return <SNETTextarea 
+    .addParameters({ props: { propTables: [SNETTextarea] } })
+    .addDecorator(withLiveEditScope({ React, SNETTextarea }))
+    .addLiveSource(
+        "live source",
+        `return <SNETTextarea 
               label="label" 
               rowCount={6}
               colCount={6}
@@ -18,4 +18,4 @@ storiesOf("Form|SNETTextarea", module)
               minCount={12}
               maxCount={12}
  />`
-  );
+    );

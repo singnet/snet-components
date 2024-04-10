@@ -5,28 +5,31 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import VerticalTabs from "./";
 
 const upperTabs = [
-  {
-    title: "My AI Apps",
-    openInNewTab: false,
-  },
-  {
-    title: "Teams & Access",
-    openInNewTab: false,
-  },
+    {
+        title: "My AI Apps",
+        openInNewTab: false,
+    },
+    {
+        title: "Teams & Access",
+        openInNewTab: false,
+    },
 ];
 
 const lowerTabs = [
-  {
-    title: "Wallet Account",
-    openInNewTab: false,
-  },
-  {
-    title: "Dev Docs",
-    openInNewTab: true,
-  },
+    {
+        title: "Wallet Account",
+        openInNewTab: false,
+    },
+    {
+        title: "Dev Docs",
+        openInNewTab: true,
+    },
 ];
 
 storiesOf("VerticalTabs", module)
-  .addParameters({ props: { propTables: [VerticalTabs] } })
-  .addDecorator(withLiveEditScope({ React, VerticalTabs, upperTabs, lowerTabs }))
-  .addLiveSource("live source", `return <VerticalTabs  upperTabs={upperTabs} lowerTabs={lowerTabs}/>`);
+    .addParameters({ props: { propTables: [VerticalTabs] } })
+    .addDecorator(withLiveEditScope({ React, VerticalTabs, upperTabs, lowerTabs }))
+    .addLiveSource(
+        "live source",
+        `return <VerticalTabs  upperTabs={upperTabs} lowerTabs={lowerTabs}/>`
+    );

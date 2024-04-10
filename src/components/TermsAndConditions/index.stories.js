@@ -5,6 +5,6 @@ import withLiveEditScope from "storybook-addon-react-live-edit/dist/withLiveEdit
 import TermsAndConditions from "./";
 
 storiesOf("TermsAndConditions", module)
-  .addParameters({ props: { propTables: [TermsAndConditions] } })
-  .addDecorator(withLiveEditScope({ React, TermsAndConditions }))
-  .addLiveSource("live source", `return <TermsAndConditions  />`);
+    .addParameters({ props: { propTables: [TermsAndConditions] } })
+    .addDecorator(withLiveEditScope({ React, TermsAndConditions }))
+    .addLiveSource("live source", `return <TermsAndConditions  />`);
