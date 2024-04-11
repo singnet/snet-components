@@ -16,6 +16,7 @@ export const colorHeader = {
 const SNETHeader = ({
     isLoggedIn,
     color,
+    isMobileHeaderVisible,
     navbarItems,
     dropdownNavbarItems,
     LoggedInActions,
@@ -29,19 +30,21 @@ const SNETHeader = ({
             className={`${classes.snetHeader} ${color === colorHeader.PURPLE ? classes.purpleHeader : classes.whiteHeader}`}
         >
             <Box className={classes.appBar}>
-                <MobileHeader
-                    mobileNavLinks={navbarItems}
-                    mobileDropDown={dropdownNavbarItems}
-                    isLoggedIn={isLoggedIn}
-                    LoggedInActions={LoggedInActions}
-                    LoggedOutActions={LoggedOutActions}
-                    color={color}
-                />
+                {isMobileHeaderVisible && (
+                    <MobileHeader
+                        mobileNavLinks={navbarItems}
+                        mobileDropDown={dropdownNavbarItems}
+                        isLoggedIn={isLoggedIn}
+                        LoggedInActions={LoggedInActions}
+                        LoggedOutActions={LoggedOutActions}
+                        color={color}
+                    />
+                )}
                 <Logo
                     className={classes.logoContainer}
                     headerColor={color}
                     portalName={portalName}
-                    handleLogoClick={onLogoClick}
+                    handleClick={onLogoClick}
                 />
                 <NavBar
                     className={classes.navContainer}
@@ -62,6 +65,7 @@ const SNETHeader = ({
 
 SNETHeader.propTypes = {
     isLoggedIn: PropTypes.bool,
+    isMobileHeaderVisible: PropTypes.bool,
     portalName: PropTypes.string,
     color: PropTypes.oneOf([colorHeader.PURPLE, colorHeader.WHITE]),
     LoggedInActions: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.object.isRequired]),
@@ -77,5 +81,6 @@ SNETHeader.defaultProps = {
     dropdownNavbarItems: [],
     portalName: "",
     color: "white",
+    isMobileHeaderVisible: true,
 };
 export default SNETHeader;
