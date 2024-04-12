@@ -9,42 +9,38 @@ import { ProgressStatusList } from "./";
 const StatusToggler = ({ progressNumber, progressStatus }) => {
     const classes = useStyles();
 
-    if (
-        progressStatus === ProgressStatusList.COMPLETED ||
-        progressStatus === ProgressStatusList.SUCCEEDED
-    ) {
-        return (
-            <div className={classes.numberContaienr}>
-                <span className={classes.completedIcon}>
-                    <CheckIcon />
-                </span>
-            </div>
-        );
-    }
+    const CheckedStep = () => (
+        <span className={classes.completedIcon}>
+            <CheckIcon />
+        </span>
+    );
 
-    if (progressStatus === ProgressStatusList.FAILED) {
-        return (
-            <div className={classes.numberContaienr}>
-                <span className={classes.errorIcon}>
-                    <ErrorOutlineIcon />
-                </span>
-            </div>
-        );
-    }
+    const FailedStep = () => (
+        <span className={classes.errorIcon}>
+            <ErrorOutlineIcon />
+        </span>
+    );
 
-    if (progressStatus === ProgressStatusList.PENDING) {
-        return (
-            <div className={classes.numberContaienr}>
-                <span className={classes.waitingIcon}>
-                    <HourglassEmptyIcon />
-                </span>
-            </div>
-        );
-    }
+    const PendingStep = () => (
+        <span className={classes.waitingIcon}>
+            <HourglassEmptyIcon />
+        </span>
+    );
 
+    const DefaultStep = () => <span className={classes.number}>{progressNumber}</span>;
+
+    const steps = {
+        [ProgressStatusList.COMPLETED]: <CheckedStep />,
+        [ProgressStatusList.SUCCEEDED]: <CheckedStep />,
+        [ProgressStatusList.FAILED]: <FailedStep />,
+        [ProgressStatusList.PENDING]: <PendingStep />,
+    };
+    
     return (
-        <div className={classes.numberContaienr}>
-            <span className={classes.number}>{progressNumber}</span>
+        <div className={classes.numberContainer}>
+            <div className={`${classes[progressStatus]} ${classes.numberStep}`}>
+                {steps[progressStatus] ?? <DefaultStep />}
+            </div>
         </div>
     );
 };

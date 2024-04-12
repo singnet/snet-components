@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles((MUITheme) => ({
-    numberContaienr: {
+    numberStep: {
         width: 28,
         borderRadius: 25,
         backgroundColor: MUITheme.palette.text.lightGrey,
@@ -9,12 +9,14 @@ export const useStyles = makeStyles((MUITheme) => ({
         "& span": {
             "&::after": {
                 content: '""',
-                minWidth: 100,
+                width: "100%",
+                maxWidth: 200,
                 height: 1,
                 margin: "15px 0 0 20px",
                 display: "inline-block",
                 position: "absolute",
                 backgroundColor: MUITheme.palette.background.grey,
+                zIndex: -1,
                 "@media (max-width:660px)": { width: "18%" },
                 "@media (max-width:540px)": {
                     width: "16%",
@@ -29,6 +31,10 @@ export const useStyles = makeStyles((MUITheme) => ({
                 fontSize: 22,
             },
         },
+    },
+    numberContainer: {
+        padding: "0 10px",
+        background: "rgb(250, 250, 250)",
     },
     TabTitle: {
         paddingTop: 10,
@@ -49,16 +55,13 @@ export const useStyles = makeStyles((MUITheme) => ({
         "& svg": { background: "#F18D5A" },
     },
     active: {
-        "& div": {
-            backgroundColor: MUITheme.palette.primary.main,
-            "& span": {
-                color: MUITheme.palette.text.white,
-            },
+        backgroundColor: MUITheme.palette.primary.main,
+        "& span": {
+            color: MUITheme.palette.text.white,
         },
-        "& > span": { color: MUITheme.palette.text.darkGrey },
     },
     completed: {
-        "& > div": { background: "transparent" },
+        background: "transparent",
         "& span": {
             "&:last-of-type": {
                 paddingTop: 5,
@@ -67,7 +70,7 @@ export const useStyles = makeStyles((MUITheme) => ({
         },
     },
     succeeded: {
-        "& > div": { background: "transparent" },
+        background: "transparent",
         "& span": {
             "&:last-of-type": {
                 paddingTop: 5,
@@ -76,7 +79,7 @@ export const useStyles = makeStyles((MUITheme) => ({
         },
     },
     failed: {
-        "& > div": { background: "transparent" },
+        background: "transparent",
         "& span": {
             "&:last-of-type": {
                 paddingTop: 3,
@@ -85,7 +88,7 @@ export const useStyles = makeStyles((MUITheme) => ({
         },
     },
     pending: {
-        "& > div": { background: "transparent" },
+        background: "transparent",
         "& span": {
             "&:last-of-type": {
                 paddingTop: 1,

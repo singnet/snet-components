@@ -25,7 +25,7 @@ const ProgressSection = ({ progressNumber, progressText, progressStatus, onSecti
 
     return (
         <li
-            className={`${classes[progressStatus]} ${onSectionClick ? classes.clickableSection : ""}`}
+            className={`${onSectionClick ? classes.clickableSection : ""}`}
             onClick={handleSectionClick}
         >
             <Fragment>
