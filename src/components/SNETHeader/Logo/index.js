@@ -13,10 +13,10 @@ const SnetSvgLogo = {
     purple: SnetWhiteLogo,
 };
 
-const Logo = ({ headerColor, portalName, handleLogoClick }) => {
+const Logo = ({ headerColor, portalName, handleClick }) => {
     const classes = useStyles();
     return (
-        <Box className={classes.logoContainer} onClick={handleLogoClick}>
+        <Box className={classes.logoContainer} onClick={handleClick}>
             <CardMedia component="img" image={SnetSvgLogo[headerColor]} alt="SingularityNET" />
             <Typography variant="h5">{portalName}</Typography>
         </Box>
