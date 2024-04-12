@@ -4,7 +4,7 @@ export const useStyles = makeStyles((MUITheme) => ({
     root: (props) => {
         const rootStyles = {
             fontFamily: MUITheme.typography.fontFamily,
-            fontWeight: 600,
+            fontWeight: 500,
             fontSize: 14,
             letterSpacing: 1.25,
             padding: "13px 28px 11px",
