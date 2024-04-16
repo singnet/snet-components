@@ -2,10 +2,12 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles((MUITheme) => ({
     loginDetails: {
-        height: "100vh",
         textAlign: "center",
         backgroundColor: MUITheme.palette.background.mainContent,
         fontFamily: MUITheme.typography.fontFamily,
+        "& h2": {
+            "@media(max-width:340px)": { fontSize: "2rem" },
+        }
     },
     loginForm: {
         boxSizing: "border-box",
@@ -27,7 +29,7 @@ export const useStyles = makeStyles((MUITheme) => ({
             width: "100%",
             marginTop: 17,
         },
-        [MUITheme.breakpoints.down("xs")]: {
+        [MUITheme.breakpoints.down("sm")]: {
             width: "auto",
             margin: "40px 30px 0",
         },
