@@ -47,6 +47,7 @@ export const MUITheme = createTheme({
             hover: {
                 blue: "#ecf3fe",
                 red: "#D0021B",
+                redLight: "#d0021b14",
                 black: "#333",
             },
             grey: "#D6D6D6",
@@ -76,6 +77,7 @@ export const MUITheme = createTheme({
     },
     typography: {
         fontFamily: "Montserrat, Helvetica, MuliRegular, MuliLight",
+        fontWeight: 500,
         h2: {
             color: "#212121",
             fontSize: 36,

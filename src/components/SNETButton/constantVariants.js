@@ -2,12 +2,24 @@ import MUITheme from "shared/dist/assets/Theme";
 export const buttonStyleVariants = {
     "red-": {
         color: MUITheme.palette.text.red,
+        hover: {
+            backgroundColor: MUITheme.palette.background.hover.redLight,
+        },
     },
     "white-": {
         borderWidth: 2,
         borderStyle: "solid",
         backgroundColor: MUITheme.palette.background.white,
         boxShadow: "0 0 1px 0 rgba(0,0,0,0.12), 0 1px 1px 0 rgba(0,0,0,0.24)",
+    },
+    "red-outlined": {
+        borderWidth: 1,
+        borderStyle: "solid",
+        borderColor: MUITheme.palette.background.red,
+        color: MUITheme.palette.text.red,
+        hover: {
+            backgroundColor: MUITheme.palette.background.hover.redLight,
+        },
     },
     "white-outlined": {
         borderWidth: 2,
