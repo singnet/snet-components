@@ -1,14 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const AlertLink = ({ link, linkTo }) => {
-    if (link) {
-        return (
-            <a href={linkTo} title={link} target="_blank" rel="noreferrer">
-                {link}
-            </a>
-        );
-    }
-    return null;
+    return (
+        <a href={linkTo} title={link} target='_blank' rel='noreferrer'>
+            {link}
+        </a>
+    );
 };
 
 export default AlertLink;

@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react';
+import { withStyles } from '@mui/styles';
+import { useStyles } from './styles';
 
-const AlertIcon = ({ icon: Icon }) => {
-    if (Icon) {
-        return <Icon />;
-    }
-    return null;
+const AlertIcon = ({ classes, icon }) => {
+    return <div className={classes.iconContainer}>{icon}</div>;
 };
 
-export default AlertIcon;
+export default withStyles(useStyles)(AlertIcon);
