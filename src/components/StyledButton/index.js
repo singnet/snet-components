@@ -20,8 +20,8 @@ const buttonColor = {
 const StyledButton = ({
     disabled,
     onClick,
-    type,
-    btnType,
+    type = "blue",
+    btnType = "button",
     iconClass,
     href,
     newTab,
@@ -65,11 +65,6 @@ StyledButton.propTypes = {
     iconClass: PropTypes.string,
     href: PropTypes.string,
     newTab: PropTypes.bool,
-};
-
-StyledButton.defaultProps = {
-    type: "blue",
-    btnType: "button",
 };
 
 export default StyledButton;

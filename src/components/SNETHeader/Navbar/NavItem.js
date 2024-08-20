@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { useStyles } from "../styles";
 
-const NavItem = ({ title, link, isActive }) => {
+const NavItem = ({ title, link = "#", isActive }) => {
     const classes = useStyles();
 
     return (
@@ -19,10 +19,6 @@ const NavItem = ({ title, link, isActive }) => {
             </NavLink>
         </li>
     );
-};
-
-NavItem.defaultProps = {
-    link: "#",
 };
 
 NavItem.propTypes = {

@@ -14,15 +14,16 @@ export const colorHeader = {
 };
 
 const SNETHeader = ({
-    isLoggedIn,
-    color,
-    isMobileHeaderVisible,
-    navbarItems,
-    dropdownNavbarItems,
+    isLoggedIn = false,
+    color = "white",
+    isMobileHeaderVisible = true,
+    navbarItems = [],
+    dropdownNavbarItems = [],
     LoggedInActions,
     LoggedOutActions,
-    portalName,
+    portalName = "",
     onLogoClick,
+
 }) => {
     const classes = useStyles();
     return (
@@ -75,12 +76,4 @@ SNETHeader.propTypes = {
     dropdownNavbarItems: PropTypes.arrayOf(PropTypes.object),
 };
 
-SNETHeader.defaultProps = {
-    isLoggedIn: false,
-    navbarItems: [],
-    dropdownNavbarItems: [],
-    portalName: "",
-    color: "white",
-    isMobileHeaderVisible: true,
-};
 export default SNETHeader;

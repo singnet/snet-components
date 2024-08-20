@@ -12,8 +12,8 @@ import SNETForgotPassword from "shared/dist/components/SNETForgotPassword";
 
 const SNETForgotPasswordConfirm = ({
     email,
-    title,
-    description,
+    title = "Reset your password",
+    description = <>Thanks for confirming your email.<span>Input your new password</span></>,
     forgotPasswordConfirmError,
     onSubmit,
 }) => {
@@ -123,15 +123,6 @@ SNETForgotPasswordConfirm.propTypes = {
     description: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     forgotPasswordConfirmError: PropTypes.string,
     onSubmit: PropTypes.func,
-};
-
-SNETForgotPassword.defaultProps = {
-    title: "Reset your password",
-    description: (
-        <>
-            Thanks for confirming your email.<span>Input your new password</span>
-        </>
-    ),
 };
 
 export default SNETForgotPasswordConfirm;

@@ -9,7 +9,7 @@ import AlertBox from "../AlertBox";
 import validator from "shared/dist/utils/validator";
 import { forgotPasswordConstraints } from "./validationConstraints";
 
-const SNETForgotPassword = ({ title, desription, email, forgotPasswordError, onSubmit }) => {
+const SNETForgotPassword = ({ title, desription = "We'll email you instructions on how to reset it.", email, forgotPasswordError, onSubmit }) => {
     const classes = useStyles();
 
     const [localEmail, setEmail] = useState(email);
@@ -72,10 +72,6 @@ SNETForgotPassword.propTypes = {
     email: PropTypes.string,
     forgotPasswordError: PropTypes.string,
     onSubmit: PropTypes.func,
-};
-
-SNETForgotPassword.defaultProps = {
-    desription: "We'll email you instructions on how to reset it.",
 };
 
 export default SNETForgotPassword;

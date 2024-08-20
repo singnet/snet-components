@@ -26,9 +26,4 @@ AlertText.propTypes = {
     type: PropTypes.oneOf(["error", "success", "warning", "info"]),
 };
 
-AlertText.defaultProps = {
-    type: "error",
-    message: undefined,
-};
-
 export default AlertText;

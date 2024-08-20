@@ -10,7 +10,7 @@ import { useStyles } from "./styles";
 import PrivacyTerms from "./PrivacyTerms";
 
 const TermsAndConditions = (props) => {
-    const { classes, title, formLabel, onAccept, agreed, onChangeAgreed, Content } = props;
+    const { classes, title, formLabel, onAccept, agreed, onChangeAgreed, Content = PrivacyTerms } = props;
 
     return (
         <div className={classes.onboardingContainer}>
@@ -43,10 +43,6 @@ TermsAndConditions.protoTypes = {
     agreed: PropTypes.bool,
     onChangeAgreed: PropTypes.func,
     Content: PropTypes.element,
-};
-
-TermsAndConditions.defaultProps = {
-    Content: PrivacyTerms,
 };
 
 export default withStyles(useStyles)(TermsAndConditions);
