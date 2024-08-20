@@ -67,7 +67,6 @@ const AlertBox = ({
 };
 
 AlertBox.propTypes = {
-    icon: PropTypes.object,
     type: PropTypes.oneOf(['error', 'success', 'warning', 'info']),
     message: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     header: PropTypes.string,
