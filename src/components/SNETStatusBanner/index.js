@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { withStyles } from "@mui/styles";
 import PropTypes from "prop-types";
 
-import AnchorLink from "shared/dist/components/AnchorLink";
+import AnchorLink from "../AnchorLink";
 import Button from "@mui/material/Button";
 import { useStyles } from "./styles";
 

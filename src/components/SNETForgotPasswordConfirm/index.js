@@ -5,14 +5,16 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import AlertBox from "shared/dist/components/AlertBox";
-import validator from "shared/dist/utils/validator";
+import AlertBox from "../AlertBox";
+import validator from "../../utils/validator";
 import { forgotPassworSubmitConstraints } from "./validationConstraints";
-import SNETForgotPassword from "shared/dist/components/SNETForgotPassword";
+import SNETForgotPassword from "../SNETForgotPassword";
+
+const titleText = "Reset your password"
 
 const SNETForgotPasswordConfirm = ({
     email,
-    title = "Reset your password",
+    title = titleText,
     description = <>Thanks for confirming your email.<span>Input your new password</span></>,
     forgotPasswordConfirmError,
     onSubmit,

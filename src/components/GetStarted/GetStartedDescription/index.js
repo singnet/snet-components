@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@mui/styles";
 import PropTypes from "prop-types";
 
-import StyledButton from "shared/dist/components/StyledButton";
+import StyledButton from "../../StyledButton";
 import { useStyles } from "./styles";
 
 const GetStartedDescription = ({

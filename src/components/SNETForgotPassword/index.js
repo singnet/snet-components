@@ -6,12 +6,14 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import AlertBox from "../AlertBox";
-import validator from "shared/dist/utils/validator";
+import validator from "../../utils/validator";
 import { forgotPasswordConstraints } from "./validationConstraints";
 
-const SNETForgotPassword = ({ title, desription = "We'll email you instructions on how to reset it.", email, forgotPasswordError, onSubmit }) => {
-    const classes = useStyles();
+const descriptionText = "We'll email you instructions on how to reset it."
 
+const SNETForgotPassword = ({ title, desription = descriptionText, email, forgotPasswordError, onSubmit }) => {
+    const classes = useStyles();
+    
     const [localEmail, setEmail] = useState(email);
     const [validationErr, setValidationErr] = useState("");
 

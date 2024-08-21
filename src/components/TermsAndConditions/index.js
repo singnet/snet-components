@@ -2,8 +2,8 @@ import React from "react";
 import { withStyles } from "@mui/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import AlertBox from "shared/dist/components/AlertBox";
-import StyledButton from "shared/dist/components/StyledButton";
+import AlertBox from "../AlertBox";
+import StyledButton from "../StyledButton";
 import PropTypes from "prop-types";
 
 import { useStyles } from "./styles";

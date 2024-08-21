@@ -5,8 +5,8 @@ import { withStyles } from "@mui/styles";
 import InfoIcon from "@mui/icons-material/Info";
 
 import { useStyles } from "./styles";
-import StyledTextField from "shared/dist/components/StyledTextField";
-import AlertText from "shared/dist/components/AlertText";
+import StyledTextField from "../StyledTextField";
+import AlertText from "../AlertText";
 
 const SNETTextfield = ({
     classes,

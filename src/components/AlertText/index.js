@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 import { useStyles } from "./styles";
-import { alertTypes } from "shared/dist/components/AlertBox";
+import { alertTypes } from "../AlertBox/";
 
 const textColor = {
     error: alertTypes.ERROR,
@@ -12,7 +12,7 @@ const textColor = {
     info: alertTypes.INFO,
 };
 
-const AlertText = ({ type, message }) => {
+const AlertText = ({ type = "error", message }) => {
     const classes = useStyles();
 
     if (message) {
