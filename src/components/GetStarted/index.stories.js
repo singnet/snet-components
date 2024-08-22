@@ -1,14 +1,19 @@
 import GetStarted from './index.js';
-import React from "react";
-import { withStyles } from "@mui/styles";
-import PropTypes from "prop-types";
+import React from 'react';
+import { withStyles } from '@mui/styles';
+import PropTypes from 'prop-types';
 
 export const GetStartedTest = {
-    args:{
-        CTAType:false,
-        pageBtnRoute:'',
+    args: {
+        CTAType: false,
+        pageBtnRoute: '',
         GetStartedDetails: {},
-        GetStartedCategories: [{title: 2333, index: 314314}],
+        GetStartedCategories: [
+            {
+                title: '2333',
+                content: [{ type: 'description', value: 'bla bla' }],
+            },
+        ],
     },
 };
 
@@ -30,7 +35,12 @@ export default {
             control: { type: 'object' },
         },
         GetStartedCategories: {
-            default: [{title: "aasdasd", index: "314314"}],
+            default: [
+                {
+                    title: '2333',
+                    content: [{ type: 'description', value: 'bla bla' }],
+                },
+            ],
             control: { type: 'array' },
         },
     },
