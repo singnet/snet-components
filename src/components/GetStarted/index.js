@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import GetStartedDescription from "./GetStartedDescription";
 import Category from "./Category";
-import StyledButton from "shared/dist/components/StyledButton";
+import StyledButton from "../StyledButton/";
 import { useStyles } from "./styles";
 import { Link } from "react-router-dom";
 

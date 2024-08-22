@@ -11,11 +11,11 @@ const SnetDialog = ({
     isDialogOpen,
     title,
     children,
-    showCloseButton,
+    showCloseButton = true,
     disableBackdropClick,
     disableEscapeKeyDown,
     contentClass,
-    onDialogClose,
+    onDialogClose = () => {},
 }) => {
     const isMobile = window.screen.width <= 550; //px
 
@@ -77,12 +77,6 @@ SnetDialog.propTypes = {
     disableBackdropClick: propTypes.bool,
     disableEscapeKeyDown: propTypes.bool,
     contentClass: propTypes.string,
-};
-
-SnetDialog.defaultProps = {
-    showClosebutton: true,
-    // eslint-disable-next-line no-empty-function
-    onDialogClose: () => {},
 };
 
 export default withStyles(useStyles)(SnetDialog);

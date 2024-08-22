@@ -7,8 +7,8 @@ import Typography from "@mui/material/Typography";
 
 import { useStyles } from "./styles";
 import Button from "@mui/material/Button";
-import AlertBox from "shared/dist/components/AlertBox";
-import validator from "shared/dist/utils/validator";
+import AlertBox from "../AlertBox";
+import validator from "../../utils/validator";
 import { validationConstraints } from "./validationConstraints";
 
 const SNETLogin = (props) => {

@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import { withStyles } from "@mui/styles";
 
 import { useStyles } from "./styles";
-import DummyGetStartedCard from "shared/dist/assets/images/dummy-card.png";
+import DummyGetStartedCard from "../../../assets/images/dummy-card.png";
 import CategoryDetails from "./CategoryDetails";
 
 const Category = ({ classes, title, content, rightAlign, media }) => {
@@ -15,7 +15,7 @@ const Category = ({ classes, title, content, rightAlign, media }) => {
         >
             <Grid item xs={12} sm={6} md={6} lg={6} className={classes.CategoryMedia}>
                 <img
-                    src={media || DummyGetStartedCard}
+                    src={DummyGetStartedCard || media}
                     alt="DummyImage"
                     className={classes.FullWidth}
                 />

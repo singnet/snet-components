@@ -1,7 +1,7 @@
 import React from "react";
 import ParseHTML from "html-react-parser";
 
-import StyledButton from "shared/dist/components/StyledButton";
+import StyledButton from "../../../StyledButton/";
 
 const Description = ({ content }) => <p>{ParseHTML(content)}</p>;
 

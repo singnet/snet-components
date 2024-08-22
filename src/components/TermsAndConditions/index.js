@@ -2,15 +2,15 @@ import React from "react";
 import { withStyles } from "@mui/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import AlertBox from "shared/dist/components/AlertBox";
-import StyledButton from "shared/dist/components/StyledButton";
+import AlertBox from "../AlertBox";
+import StyledButton from "../StyledButton";
 import PropTypes from "prop-types";
 
 import { useStyles } from "./styles";
 import PrivacyTerms from "./PrivacyTerms";
 
 const TermsAndConditions = (props) => {
-    const { classes, title, formLabel, onAccept, agreed, onChangeAgreed, Content } = props;
+    const { classes, title, formLabel, onAccept, agreed, onChangeAgreed, Content = PrivacyTerms } = props;
 
     return (
         <div className={classes.onboardingContainer}>
@@ -43,10 +43,6 @@ TermsAndConditions.protoTypes = {
     agreed: PropTypes.bool,
     onChangeAgreed: PropTypes.func,
     Content: PropTypes.element,
-};
-
-TermsAndConditions.defaultProps = {
-    Content: PrivacyTerms,
 };
 
 export default withStyles(useStyles)(TermsAndConditions);

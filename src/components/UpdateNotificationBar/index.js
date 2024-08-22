@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "@mui/styles";
 import CloseIcon from "@mui/icons-material/Close";
-import AnnoucementIcon from "shared/dist/assets/images/AnnoucementIcon.png";
+import AnnoucementIcon from "../../assets/images/AnnoucementIcon.png";
 
 import { useStyles } from "./styles";
 
