@@ -24,7 +24,7 @@ const SNETFileUpload = (props) => {
         fileDownloadURL,
         uploadSuccess,
         error,
-        helperText,
+        helperText = null,
     } = props;
     const classes = useStyles();
 
@@ -94,10 +94,6 @@ SNETFileUpload.prototypes = {
     fileDownloadURL: PropTypes.string,
     uploadSuccess: PropTypes.bool,
     helperText: PropTypes.any,
-};
-
-SNETFileUpload.defaultProps = {
-    helperText: null,
 };
 
 export default SNETFileUpload;

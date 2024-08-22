@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import TextField from "@mui/material/TextField";
 import isEmpty from "lodash/isEmpty";
 
-import AlertText from "shared/dist/components/AlertText";
-import AlertBox, { alertTypes } from "shared/dist/components/AlertBox";
+import AlertText from "../../AlertText";
+import AlertBox, { alertTypes } from "../../AlertBox/";
 import Button from "@mui/material/Button";
 import PasswordInlineValidation from "./PasswordInlineValidation";
 import { useStyles } from "./styles";
-import validator from "shared/dist/utils/validator";
+import validator from "../../../utils/validator";
 import { signupFormConstraints } from "./validationConstraints";
 
 const Form = (props) => {

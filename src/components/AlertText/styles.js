@@ -9,6 +9,6 @@ export const useStyles = makeStyles((MuiTheme) => ({
     },
     error: { color: MuiTheme.palette.error.main },
     success: { color: MuiTheme.palette.success.main },
-    warning: { color: MuiTheme.palette.text.warningBorder },
+    warning: { color: MuiTheme.palette.background.alertBox },
     info: { color: MuiTheme.palette.primary.main },
 }));

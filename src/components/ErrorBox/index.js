@@ -1,8 +1,7 @@
 import React from "react";
 import { withStyles } from "@mui/styles";
 import PropTypes from "prop-types";
-
-import NoConnectionImg from "shared/dist/assets/images/error.svg";
+import NoConnectionImg from "/src/assets/images/error.svg";
 import { useStyles } from "./styles";
 
 const ErrorBox = ({ classes, errImg, errText }) => {

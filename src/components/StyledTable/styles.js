@@ -2,7 +2,7 @@ export const useStyles = (theme) => ({
     styledTable: { paddingTop: 20 },
     styledTableHeader: {
         color: theme.palette.text.mediumShadeGray,
-        fontFamily: theme.typography.primary.main,
+        fontFamily: theme.typography.primary?.main,
         fontSize: 16,
         fontWeight: 600,
     },
@@ -22,7 +22,7 @@ export const useStyles = (theme) => ({
             "& div": { display: "flex" },
             "& p": {
                 color: theme.palette.text.mediumShadeGray,
-                fontFamily: theme.typography.primary.main,
+                fontFamily: theme.typography.primary?.main,
                 fontSize: 14,
                 lineHeight: "40px",
             },

@@ -9,9 +9,9 @@ import PropTypes from "prop-types";
 import { useStyles } from "./styles";
 
 const StyledDropdown = ({
-    labelTxt,
+    labelTxt = "",
     list,
-    value,
+    value = "default",
     onChange,
     formControlProps,
     inputLabel,
@@ -69,11 +69,6 @@ StyledDropdown.propTypes = {
         })
     ),
     onChange: PropTypes.func,
-};
-
-StyledDropdown.defaultProps = {
-    labelTxt: "",
-    value: "default",
 };
 
 export default StyledDropdown;

@@ -25,7 +25,7 @@ const backgroundColor = {
 const AlertBox = ({
     classes,
     message,
-    type,
+    type = 'error',
     link,
     linkTo,
     children,
@@ -74,11 +74,6 @@ AlertBox.propTypes = {
     linkTo: PropTypes.string,
     children: PropTypes.node,
     icon: PropTypes.node,
-};
-
-AlertBox.defaultProps = {
-    type: 'error',
-    message: undefined,
 };
 
 export default withStyles(useStyles)(AlertBox);

@@ -5,9 +5,9 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 
-import StyledButton from "shared/dist/components/StyledButton";
-import PageNotFoundImage from "shared/dist/assets/images/pageNotFound.png";
-import AnchorLink from "shared/dist/components/AnchorLink";
+import StyledButton from "../StyledButton";
+import PageNotFoundImage from "../../assets/images/pageNotFound.png";
+import AnchorLink from "../AnchorLink";
 import { useStyles } from "./styles";
 
 const PageNotFound = ({ classes, homePath }) => {

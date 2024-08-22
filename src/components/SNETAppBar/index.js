@@ -10,7 +10,7 @@ const SNETAppBar = withStyles((MuiTheme) => ({
             return rootStyles;
         }
         if (props.color === "purple") {
-            rootStyles.backgroundColor = MuiTheme.palette.purple.main;
+            rootStyles.backgroundColor = MuiTheme.palette.purple?.main;
             return rootStyles;
         }
         return rootStyles;

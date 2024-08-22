@@ -2,7 +2,7 @@ import React from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import PropTypes from "prop-types";
 import Typography from "@mui/material/Typography";
-import SNETDialog from "shared/dist/components/SNETDialog";
+import SNETDialog from "../SNETDialog";
 
 import { useStyles } from "./styles";
 

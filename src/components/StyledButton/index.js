@@ -20,11 +20,11 @@ const buttonColor = {
 const StyledButton = ({
     disabled,
     onClick,
-    type,
-    btnType,
+    type = "blue",
+    btnType = "button",
     iconClass,
     href,
-    newTab,
+    openInNewTab,
     btnText,
     ...rest
 }) => {
@@ -37,8 +37,8 @@ const StyledButton = ({
             onClick={onClick}
             type={btnType}
             href={href}
-            target={href && newTab ? "_blank" : ""}
-            rel={href && newTab ? "noopener" : ""}
+            target={href && openInNewTab ? "_blank" : ""}
+            rel={href && openInNewTab ? "noopener" : ""}
             {...rest}
         >
             {iconClass ? <Icon className={iconClass} /> : null}
@@ -64,12 +64,7 @@ StyledButton.propTypes = {
     onClick: PropTypes.func,
     iconClass: PropTypes.string,
     href: PropTypes.string,
-    newTab: PropTypes.bool,
-};
-
-StyledButton.defaultProps = {
-    type: "blue",
-    btnType: "button",
+    openInNewTab: PropTypes.bool,
 };
 
 export default StyledButton;
