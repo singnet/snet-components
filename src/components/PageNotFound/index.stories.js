@@ -1,22 +1,27 @@
+import React from 'react';
 import PageNotFound from './index.js';
-import React from "react";
-import { withStyles } from "@mui/styles";
-import PropTypes from "prop-types";
+import { MemoryRouter } from 'react-router-dom';
 
 export const PageNotFoundTest = {
-    args:{
-        handleGoToHome: true,
+    args: {
+        homePath: "/home",
     },
 };
 
 export default {
     component: PageNotFound,
+    decorators: [
+        (Story) => (
+            <MemoryRouter>
+                <Story />
+            </MemoryRouter>
+        ),
+    ],
     tags: ['autodocs'],
     argTypes: {
-        handleGoToHome: {
-            options: [true, false],
-            control: { type: 'radio' },
-            default: true,
+        homePath: {
+            control: { type: 'text' },
+            defaultValue: "/home",
         },
     },
 };

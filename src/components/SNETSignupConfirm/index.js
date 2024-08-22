@@ -4,10 +4,10 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
 import { useStyles } from "./styles";
-import AlertBox, { alertTypes } from "./AlertBox";
+import AlertBox, { alertTypes } from "../AlertBox";
 import Button from "@mui/material/Button";
 import Info from "./Info";
-import validator from "shared/dist/utils/validator";
+import validator from "../../utils/validator";
 import { signupConfirmConstraints } from "./validationConstraints";
 
 const SNETSignupConfirm = (props) => {

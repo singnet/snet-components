@@ -15,7 +15,7 @@ export const useStyles = theme => ({
   audioUploderHeader: {
     "& h6": {
       padding: 4,
-      fontFamily: theme.typography.primary.main,
+      fontFamily: theme.typography.fontFamily,
       fontSize: 18,
     },
   },
@@ -49,7 +49,7 @@ export const useStyles = theme => ({
     height: 300,
   },
   tabLabelStyle: {
-    fontFamily: theme.typography.primary.main,
+    fontFamily: theme.typography.fontFamily,
     fontVariantCaps: "normal",
     textTransform: "initial",
     fontSize: 14,
@@ -64,7 +64,7 @@ export const useStyles = theme => ({
     },
   },
   uploadBoxTitle: {
-    fontFamily: theme.typography.primary.main,
+    fontFamily: theme.typography.fontFamily,
     fontSize: 16,
     color: "#9e9e9e",
     "& a": {
@@ -75,7 +75,7 @@ export const useStyles = theme => ({
   uploadBoxDescription: {
     width: "58%",
     margin: "0 auto",
-    fontFamily: theme.typography.primary.main,
+    fontFamily: theme.typography.fontFamily,
     fontSize: 12,
     color: "#9b9b9b",
     textAlign: "center",
@@ -127,7 +127,7 @@ export const useStyles = theme => ({
       align: "center",
       justifyContent: "space-between",
       "& p": {
-        fontFamily: theme.typography.primary.main,
+        fontFamily: theme.typography.fontFamily,
         fontSize: 14,
       },
     },

@@ -5,8 +5,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useStyles } from "./styles";
 
-import SnetBlackLogo from "shared/dist/assets/images/BlackLogo.svg";
-import SnetWhiteLogo from "shared/dist/assets/images/WhiteLogo.svg";
+import SnetBlackLogo from "../../../assets/images/BlackLogo.svg";
+import SnetWhiteLogo from "../../../assets/images/WhiteLogo.svg";
 
 const SnetSvgLogo = {
     white: SnetBlackLogo,

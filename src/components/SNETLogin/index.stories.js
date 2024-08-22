@@ -2,6 +2,8 @@ import SNETLoader from './index.js';
 import React from "react";
 import { withStyles } from "@mui/styles";
 import PropTypes from "prop-types";
+import { DecoratorHelpers } from '@storybook/addon-themes';
+import { BrowserRouter } from 'react-router-dom';
 
 export const SNETLoaderTest = {
     args:{
@@ -15,6 +17,13 @@ export const SNETLoaderTest = {
 export default {
     component: SNETLoader,
     tags: ['autodocs'],
+    decorators:[
+        (Story) =>(
+            <BrowserRouter>
+                <Story/>
+            </BrowserRouter> 
+        )
+    ],
     argTypes: {
         onSubmit:{
             default: () => {},
@@ -26,7 +35,7 @@ export default {
         },       
         loginError:{
             control: {type: 'text'},
-            default: "Error, something went wrong",
+            default: "",
         },
         forgotPasswordLink:{
             control: {type: 'text'},

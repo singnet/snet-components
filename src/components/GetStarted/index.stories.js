@@ -8,7 +8,7 @@ export const GetStartedTest = {
         CTAType:false,
         pageBtnRoute:'',
         GetStartedDetails: {},
-        GetStartedCategories: ["1", "2", "3"],
+        GetStartedCategories: [{title: 2333, index: 314314}],
     },
 };
 
@@ -30,7 +30,7 @@ export default {
             control: { type: 'object' },
         },
         GetStartedCategories: {
-            default: ["1", "2", "3"],
+            default: [{title: "aasdasd", index: "314314"}],
             control: { type: 'array' },
         },
     },

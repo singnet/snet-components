@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme } from '@mui/material/styles';
+import { MuiThemeProvider, createTheme } from '@mui/material/styles';
 
 import Grid from '@mui/material/Grid';
 
@@ -24,7 +24,7 @@ import SwipeableViews from 'react-swipeable-views';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-import { Tooltip } from '@mui/material';
+import { ImageListItemBar, Tooltip } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 import FileDrop from 'react-file-drop';
@@ -33,9 +33,8 @@ import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 
-import GridList from '@mui/material/GridList';
-import GridListTile from '@mui/material/GridListTile';
-import GridListTileBar from '@mui/material/GridListTileBar'; // for image uploaded state
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 import Snackbar from '@mui/material/Snackbar';
 import SnackbarContent from '@mui/material/SnackbarContent';
@@ -144,7 +143,7 @@ class SNETAudioUpload extends React.Component {
 
         // Color Palette
         this.mainColor = this.props.mainColor[500];
-        this.theme = createMuiTheme({
+        this.theme = createTheme({
             palette: {
                 primary: this.props.mainColor,
                 error: red,
@@ -686,8 +685,8 @@ class SNETAudioUpload extends React.Component {
         const { classes } = this.props;
         return (
             <div className={classes.galleryTabContainer}>
-                <GridList
-                    className={classes.galleryTabGridList}
+                <ImageList
+                    className={classes.galleryTabImageList}
                     cols={this.props.galleryCols}
                     spacing={spacingUnit}
                 >
@@ -698,7 +697,7 @@ class SNETAudioUpload extends React.Component {
                             timeout={i * 500}
                             key={i}
                         >
-                            <GridListTile key={i}>
+                            <ImageListItem key={i}>
                                 <img
                                     src={url}
                                     alt={'Gallery Image ' + i}
@@ -706,10 +705,10 @@ class SNETAudioUpload extends React.Component {
                                         this.handleSearchSubmit({ url })
                                     }
                                 />
-                            </GridListTile>
+                            </ImageListItem>
                         </Grow>
                     ))}
-                </GridList>
+                </ImageList>
             </div>
         );
     }
@@ -818,7 +817,7 @@ class SNETAudioUpload extends React.Component {
                         }
                     />
                     <Fade in={this.state.displayImageName}>
-                        <GridListTileBar
+                        <ImageListItemBar
                             title={
                                 <Typography
                                     style={{
@@ -963,7 +962,7 @@ class SNETAudioUpload extends React.Component {
                         }
                     />
                     <Fade in={this.state.displayImageName}>
-                        <GridListTileBar
+                        <ImageListItemBar
                             style={{}}
                             title={
                                 <Typography
@@ -1034,7 +1033,7 @@ class SNETAudioUpload extends React.Component {
                     />
                     {this.state.outputImageName !== null ? (
                         <Fade in={this.state.displayImageName}>
-                            <GridListTileBar
+                            <ImageListItemBar
                                 style={{}}
                                 title={
                                     <Typography
