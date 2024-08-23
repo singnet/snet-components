@@ -4,6 +4,7 @@ import StyledMenu from "./index";
 export default {
     title: "Components/StyledMenu",
     component: StyledMenu,
+    tags: ['autodocs'],
     argTypes: {
         label: {
             control: { type: "text" },

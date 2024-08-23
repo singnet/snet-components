@@ -5,6 +5,7 @@ import { useState } from "react";
 export default {
     title: "Components/SNETPagination",
     component: SNETPagination,
+    tags: ['autodocs'],
     argTypes: {
         limit: {
             control: { type: "number" },
@@ -56,8 +57,8 @@ const Template = (args) => {
     );
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const SNETPaginationTest = Template.bind({});
+SNETPaginationTest.args = {
     limit: 10,
     offset: 0,
     totalCount: 100,

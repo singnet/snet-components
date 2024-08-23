@@ -4,6 +4,7 @@ import StyledDropdown from "./index";
 export default {
     title: "Components/StyledDropdown",
     component: StyledDropdown,
+    tags: ['autodocs'],
     argTypes: {
         labelTxt: {
             control: { type: "text" },

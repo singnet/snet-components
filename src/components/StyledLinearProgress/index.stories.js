@@ -4,6 +4,7 @@ import StyledLinearProgress from "./index";
 export default {
     title: "Components/StyledLinearProgress",
     component: StyledLinearProgress,
+    tags: ['autodocs'],
     argTypes: {
         value: {
             control: { type: "number" },

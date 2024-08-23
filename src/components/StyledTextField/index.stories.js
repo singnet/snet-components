@@ -4,6 +4,7 @@ import StyledTextField from "./index";
 export default {
     title: "Components/StyledTextField",
     component: StyledTextField,
+    tags: ['autodocs'],
     argTypes: {
         label: {
             control: { type: "text" },

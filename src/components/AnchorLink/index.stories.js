@@ -1,4 +1,3 @@
-import React from 'react';
 import AnchorLink from './';
 
 export const AnchorLinkTest = {

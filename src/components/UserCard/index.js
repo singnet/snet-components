@@ -4,7 +4,7 @@ import { withStyles } from "@mui/styles";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 
-import SingularityLogo from "shared/dist/assets/images/avatar.png";
+import SingularityLogo from "../../assets/images/avatar.png";
 
 import { useStyles } from "./styles";
 

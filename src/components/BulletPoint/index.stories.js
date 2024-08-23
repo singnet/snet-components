@@ -1,4 +1,3 @@
-import React from 'react';
 import BulletPoint from './index.js';
 import { alertTypes } from '../AlertBox/';
 
