@@ -1,1 +1,1 @@
-export { default } from "./AlertBox";
+export { default, alertTypes } from "./AlertBox";
