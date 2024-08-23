@@ -1,6 +1,5 @@
 import React from 'react';
-import AlertBox from './';
-import { alertTypes } from './';
+import AlertBox, { alertTypes } from './AlertBox';
 import WarningIcon from '@mui/icons-material/Warning';
 
 export const AlertBoxWithoutChildren = {

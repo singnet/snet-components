@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes"
 
-export const useStyles = makeStyles((MuiTheme) => ({
+export const useStyles = makeStyles((MuiTheme: CustomThemeOptions) => ({
     errorMsg: {
         margin: 0,
         fontSize: 12.17,

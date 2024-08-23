@@ -1,6 +1,23 @@
-export interface AlertBoxProps {
+import { ReactNode } from "react";
+
+export interface AlertProps {
     message: string;
-    type: string;
+    type: AlertTypesProps;
+}
+
+export interface AlertBoxProps extends AlertProps {
     linkTo?: string;
     link?: string;
+    children?: ReactNode;
+    icon?: ReactNode;
+    header?: string;
 }
+
+export interface ColorProps {
+    error: string;
+    success: string;
+    warning: string;
+    info: string;
+}
+
+export type AlertTypesProps = keyof ColorProps;
