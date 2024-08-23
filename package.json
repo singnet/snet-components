@@ -1,15 +1,31 @@
 {
-  "name": "snet-components-storybook",
+  "name": "snet-components",
   "version": "0.1.0",
   "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/material-icons": "^5.0.19",
+    "@fontsource/montserrat": "^5.0.19",
+    "@fontsource/muli": "^4.1.0",
+    "@mui/material": "^5.16.7",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.105",
+    "@types/react-dom": "^18.3.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "rollup": "rollup -c --bundleConfigAsCjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_ee510a07110a2e5"
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
@@ -30,42 +46,46 @@
       "last 1 safari version"
     ]
   },
+  "description": "It's test ui components lib",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.6.1",
+    "@chromatic-com/storybook": "^1.7.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
     "@storybook/addon-onboarding": "^8.2.9",
     "@storybook/addon-themes": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
     "@storybook/preset-create-react-app": "^8.2.9",
     "@storybook/react": "^8.2.9",
     "@storybook/react-webpack5": "^8.2.9",
-    "ajv": "^8.17.1",
-    "chromatic": "^11.3.0",
+    "@storybook/test": "^8.2.9",
+    "@types/react": "^18.3.4",
     "eslint-plugin-storybook": "^0.8.0",
-    "joi": "^17.13.3",
     "prop-types": "^15.8.1",
-    "react-refresh": "^0.14.2",
+    "rollup": "^4.21.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.2.9",
-    "web-vitals": "^2.1.4"
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0"
   },
-  "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@fontsource/material-icons": "^5.0.17",
-    "@fontsource/montserrat": "^5.0.17",
-    "@fontsource/muli": "^4.1.0",
-    "@mui/icons-material": "^5.15.15",
-    "@mui/material": "^5.15.15",
-    "@mui/styles": "^5.15.15",
-    "html-react-parser": "^5.1.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-dropzone": "^14.2.3",
-    "react-file-drop": "^3.1.6",
-    "react-router-dom": "^6.26.1",
-    "react-scripts": "^5.0.1",
-    "react-swipeable-views": "^0.14.0",
-    "validate.js": "^0.13.1"
-  }
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "keywords": [
+    "ui",
+    "components"
+  ],
+  "author": "https://github.com/MarinaFedy",
+  "license": "ISC"
 }
