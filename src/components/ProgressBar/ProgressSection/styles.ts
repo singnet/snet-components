@@ -1,5 +1,7 @@
 import { makeStyles } from "@mui/styles";
-export const useStyles = makeStyles((MUITheme) => ({
+import { CustomThemeOptions } from "../../../assets/ThemeTypes";
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     numberStep: {
         width: 28,
         borderRadius: 25,
@@ -95,6 +97,9 @@ export const useStyles = makeStyles((MUITheme) => ({
                 color: "#F18D5A",
             },
         },
+    },
+    idle: {
+        background: "transparent"
     },
     clickableSection: {
         cursor: "pointer",

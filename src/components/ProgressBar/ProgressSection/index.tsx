@@ -1,10 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, FC } from "react";
 import PropTypes from "prop-types";
 
 import { useStyles } from "./styles";
 import StatusToggler from "./StatusToggler";
 
-export const ProgressStatusList = {
+import { ProgressSectionProps, ProgressStatusTextTypes } from "../ProgressBar.types";
+
+export const ProgressStatusList: ProgressStatusTextTypes = {
     IDLE: "idle",
     ACTIVE: "active",
     COMPLETED: "completed",
@@ -13,7 +15,7 @@ export const ProgressStatusList = {
     PENDING: "pending",
 };
 
-const ProgressSection = ({ progressNumber, progressText, progressStatus, onSectionClick }) => {
+const ProgressSection: FC<ProgressSectionProps> = ({ progressNumber, progressText, progressStatus, onSectionClick }) => {
     const classes = useStyles();
 
     const handleSectionClick = () => {
@@ -34,20 +36,6 @@ const ProgressSection = ({ progressNumber, progressText, progressStatus, onSecti
             </Fragment>
         </li>
     );
-};
-
-ProgressSection.propTypes = {
-    progressNumber: PropTypes.number.isRequired,
-    progressText: PropTypes.string.isRequired,
-    progressStatus: PropTypes.oneOf([
-        "idle",
-        "active",
-        "completed",
-        "pending",
-        "succeeded",
-        "failed",
-    ]),
-    onSectionClick: PropTypes.func,
 };
 
 export default ProgressSection;

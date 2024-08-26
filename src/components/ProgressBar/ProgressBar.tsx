@@ -1,24 +1,33 @@
-import React from "react";
-import { withStyles } from "@mui/styles";
-import PropTypes from "prop-types";
+import React, { FC } from 'react';
+import { ProgressBarProps, ProgressStatusText } from './ProgressBar.types';
+import ProgressSection, { ProgressStatusList } from './ProgressSection';
+import { useStyles } from './styles';
 
-import ProgressSection, { ProgressStatusList } from "./ProgressSection";
-import { useStyles } from "./styles";
+const ProgressBar: FC<ProgressBarProps> = ({
+    activeSection,
+    progressText,
+    onSectionClick,
+    progressStatus = {},
+}) => {
+    const classes = useStyles();
 
-const ProgressBar = ({ classes, activeSection, progressText, onSectionClick, progressStatus = {}}) => {
-    const computeProgressStatus = (progressNumber, activeSection) => {
+    const computeProgressStatus = (
+        progressNumber: number,
+        activeSection: number
+    ): ProgressStatusText => {
         if (progressNumber < Number(activeSection)) {
             return ProgressStatusList.COMPLETED;
         }
         if (progressNumber === Number(activeSection)) {
             return ProgressStatusList.ACTIVE;
         }
-        if (progressNumber > Number(activeSection)) {
-            return ProgressStatusList.IDLE;
-        }
+        return ProgressStatusList.IDLE;
     };
 
-    const handleProgressBarStatus = (progressNumber, activeSection) => {
+    const handleProgressBarStatus = (
+        progressNumber: number,
+        activeSection: number
+    ): ProgressStatusText => {
         if (
             progressNumber === Number(activeSection) &&
             progressStatus[progressNumber] === ProgressStatusList.IDLE
@@ -26,7 +35,7 @@ const ProgressBar = ({ classes, activeSection, progressText, onSectionClick, pro
             return ProgressStatusList.ACTIVE;
         }
         if (progressStatus[progressNumber]) {
-            return progressStatus[progressNumber].toLowerCase();
+            return progressStatus[progressNumber];
         }
         return computeProgressStatus(progressNumber, activeSection);
     };
@@ -38,7 +47,10 @@ const ProgressBar = ({ classes, activeSection, progressText, onSectionClick, pro
                     <ProgressSection
                         progressNumber={index + 1}
                         progressText={text}
-                        progressStatus={handleProgressBarStatus(index + 1, activeSection)}
+                        progressStatus={handleProgressBarStatus(
+                            index + 1,
+                            activeSection
+                        )}
                         key={text}
                         onSectionClick={onSectionClick}
                     />
@@ -48,11 +60,4 @@ const ProgressBar = ({ classes, activeSection, progressText, onSectionClick, pro
     );
 };
 
-ProgressBar.propTypes = {
-    activeSection: PropTypes.number,
-    progressText: PropTypes.arrayOf(PropTypes.string),
-    onSectionClick: PropTypes.func,
-    progressStatus: PropTypes.object,
-};
-
-export default withStyles(useStyles)(ProgressBar);
+export default ProgressBar;

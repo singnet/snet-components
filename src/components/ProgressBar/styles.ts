@@ -1,4 +1,7 @@
-export const useStyles = (MUITheme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes"
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     tabsContainer: {
         width: 600,
         paddingTop: 41,
@@ -36,4 +39,4 @@ export const useStyles = (MUITheme) => ({
         },
         "@media (max-width:660px)": { width: "90%" },
     },
-});
+}));

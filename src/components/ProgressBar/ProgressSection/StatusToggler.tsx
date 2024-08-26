@@ -1,12 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import CheckIcon from "@mui/icons-material/Check";
 import ErrorOutlineIcon from "@mui/icons-material/PriorityHigh";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-
+import { ProgressTogglerProps, StepsProps } from "../ProgressBar.types";
 import { useStyles } from "./styles";
-import { ProgressStatusList } from "./";
+import { ProgressStatusList } from ".";
 
-const StatusToggler = ({ progressNumber, progressStatus }) => {
+const StatusToggler: FC<ProgressTogglerProps> = ({ progressNumber, progressStatus }) => {
     const classes = useStyles();
 
     const CheckedStep = () => (
@@ -27,13 +27,15 @@ const StatusToggler = ({ progressNumber, progressStatus }) => {
         </span>
     );
 
-    const DefaultStep = () => <span className={classes.number}>{progressNumber}</span>;
+    const DefaultStep = () => <span>{progressNumber}</span>;
 
-    const steps = {
+    const steps: StepsProps = {
         [ProgressStatusList.COMPLETED]: <CheckedStep />,
         [ProgressStatusList.SUCCEEDED]: <CheckedStep />,
         [ProgressStatusList.FAILED]: <FailedStep />,
         [ProgressStatusList.PENDING]: <PendingStep />,
+        [ProgressStatusList.IDLE]:  <DefaultStep />,
+        [ProgressStatusList.ACTIVE]: <DefaultStep />,
     };
     
     return (
