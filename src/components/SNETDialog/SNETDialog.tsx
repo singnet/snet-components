@@ -1,13 +1,11 @@
-import React from "react";
-import propTypes from "prop-types";
+import React, { FC } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import MobileDialog from "./mobileDialog";
+import MobileDialog from "./MobileDialog";
 import { useStyles } from "./styles";
-import { withStyles } from "@mui/styles";
 import { Typography, Box, DialogContent, Dialog, IconButton } from "@mui/material";
+import { SNETDialogProps } from "./SNETDialog.types";
 
-const SnetDialog = ({
-    classes,
+const SnetDialog: FC<SNETDialogProps> = ({
     isDialogOpen,
     title,
     children,
@@ -18,15 +16,15 @@ const SnetDialog = ({
     onDialogClose = () => {},
 }) => {
     const isMobile = window.screen.width <= 550; //px
-
+    const classes = useStyles();
     // eslint-disable-next-line no-unused-vars
-    const handleDialogClose = (event, reason) => {
+    const handleDialogClose = (event: {}, reason: string): void => {
         if (disableBackdropClick && reason === "backdropClick") {
-            return false;
+            return;
         }
 
         if (disableEscapeKeyDown && reason === "escapeKeyDown") {
-            return false;
+            return;
         }
         onDialogClose();
     };
@@ -53,9 +51,8 @@ const SnetDialog = ({
                 <Typography className={classes.titleText}>{title}</Typography>
                 {showCloseButton && (
                     <IconButton
-                        aria-label="close"
                         onClick={onDialogClose}
-                        className={classes.iconButton}
+                        classes={classes.iconButton}
                     >
                         <CloseIcon />
                     </IconButton>
@@ -68,15 +65,4 @@ const SnetDialog = ({
     );
 };
 
-SnetDialog.propTypes = {
-    isDialogOpen: propTypes.bool.isRequired,
-    onDialogClose: propTypes.func,
-    title: propTypes.string,
-    children: propTypes.node,
-    showClosebutton: propTypes.bool,
-    disableBackdropClick: propTypes.bool,
-    disableEscapeKeyDown: propTypes.bool,
-    contentClass: propTypes.string,
-};
-
-export default withStyles(useStyles)(SnetDialog);
+export default (SnetDialog);

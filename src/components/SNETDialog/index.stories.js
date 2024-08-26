@@ -1,11 +1,11 @@
-import SNETAppBar from './index.js';
-import React from "react";
+import SNETAppBar from './';
+import React from 'react';
 
 export const SNETAppBarTest = {
-    args:{
+    args: {
         isDialogOpen: true,
         onDialogClose: () => {},
-        title: "title",
+        title: 'title',
         children: <span> i'm children </span>,
         showClosebutton: true,
         disableBackdropClick: false,
@@ -18,41 +18,34 @@ export default {
     component: SNETAppBar,
     tags: ['autodocs'],
     argTypes: {
-        onDialogClose:
-        {
+        onDialogClose: {
             default: () => {},
         },
-        isDialogOpen:
-        {
+        isDialogOpen: {
             options: [true, false],
             control: { type: 'radio' },
             default: true,
         },
-        setErrorFunction:
-        {
+        setErrorFunction: {
             options: [true, false],
             control: { type: 'radio' },
             default: true,
         },
-        title:
-        {
-            control: {type: 'text'},
-            default: "Title",
+        title: {
+            control: { type: 'text' },
+            default: 'Title',
         },
-        showClosebutton:
-        {
+        showClosebutton: {
             options: [true, false],
             control: { type: 'radio' },
             default: true,
         },
-        disableBackdropClick:
-        {
+        disableBackdropClick: {
             options: [true, false],
             control: { type: 'radio' },
             default: true,
         },
-        disableEscapeKeyDown:
-        {
+        disableEscapeKeyDown: {
             options: [true, false],
             control: { type: 'radio' },
             default: true,
@@ -60,6 +53,6 @@ export default {
         children: {
             default: 'Children components',
             control: { type: 'node' },
-        }
+        },
     },
 };

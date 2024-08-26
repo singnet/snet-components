@@ -1,4 +1,7 @@
-export const useStyles = (MUITheme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes"
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     dialogTitle: {
         padding: "16px 24px !important",
         color: MUITheme.palette.blue,
@@ -33,4 +36,4 @@ export const useStyles = (MUITheme) => ({
         padding: 10,
         borderBottom: `1px solid ${MUITheme.palette.border.grey}`,
     },
-});
+}));

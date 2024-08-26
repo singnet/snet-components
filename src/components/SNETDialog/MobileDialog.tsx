@@ -1,9 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import { Typography, Box, Modal } from "@mui/material";
 import { useStyles } from "./styles";
-import { withStyles } from "@mui/styles";
+import { BaseDialogProps } from "./SNETDialog.types";
 
-const MobileDialog = ({ classes, isDialogOpen, onDialogClose, title, children }) => {
+const MobileDialog: FC<BaseDialogProps> = ({ isDialogOpen, onDialogClose, title, children }) => {
+    const classes = useStyles();
+    
     return (
         <Modal
             onClose={onDialogClose}
@@ -18,4 +20,4 @@ const MobileDialog = ({ classes, isDialogOpen, onDialogClose, title, children })
     );
 };
 
-export default withStyles(useStyles)(MobileDialog);
+export default MobileDialog;
