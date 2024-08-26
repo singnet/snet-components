@@ -1,4 +1,7 @@
-export const useStyles = (theme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
+
+export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     offlineIndicator: {
         display: "flex",
         alignItems: "center",
@@ -22,4 +25,4 @@ export const useStyles = (theme) => ({
             },
         },
     },
-});
+}));
