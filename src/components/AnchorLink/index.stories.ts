@@ -1,4 +1,4 @@
-import AnchorLink from './';
+import AnchorLink from './AnchorLink';
 
 export const AnchorLinkTest = {
     args: {
