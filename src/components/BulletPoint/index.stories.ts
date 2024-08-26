@@ -1,5 +1,5 @@
-import BulletPoint from './index.js';
-import { alertTypes } from '../AlertBox/';
+import BulletPoint from './BulletPoint';
+import { alertTypes } from '../AlertBox/AlertBox';
 
 
 export const BulletPointTest = {
