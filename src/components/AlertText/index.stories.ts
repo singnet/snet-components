@@ -1,4 +1,4 @@
-import AlertText from './index.js';
+import AlertText from './';
 import { alertTypes } from '../AlertBox/';
 
 export const AlertTextTest = {
