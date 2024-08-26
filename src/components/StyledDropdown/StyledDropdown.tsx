@@ -1,14 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import InfoIcon from "@mui/icons-material/Info";
 import PropTypes from "prop-types";
-
+import { StyledDropdownProps } from "./StyledDropdown.types";
 import { useStyles } from "./styles";
 
-const StyledDropdown = ({
+const StyledDropdown: FC<StyledDropdownProps> = ({
     labelTxt = "",
     list,
     value = "default",
@@ -59,16 +59,5 @@ const StyledDropdown = ({
     );
 };
 
-StyledDropdown.propTypes = {
-    inputLabel: PropTypes.string,
-    labelTxt: PropTypes.string,
-    list: PropTypes.arrayOf(
-        PropTypes.shape({
-            value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-            label: PropTypes.string,
-        })
-    ),
-    onChange: PropTypes.func,
-};
 
 export default StyledDropdown;
