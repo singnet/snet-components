@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes"
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     styledButton: {
         borderWidth: 1,
         borderStyle: "solid",
@@ -75,4 +76,12 @@ export const useStyles = makeStyles((theme) => ({
             color: theme.palette.text.disabled,
         },
     },
+    transparentBlueBorderDisable: {
+        borderWidth: 2,
+        borderColor: theme.palette.background.disabled,
+        color: theme.palette.text.disabled,
+    },
+    gradientBg: {
+        borderColor: theme.palette.primary.main,
+    }
 }));
