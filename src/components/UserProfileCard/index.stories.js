@@ -1,4 +1,4 @@
-import UserProfileCard from './index.js';
+import UserProfileCard from './';
 
 export const UserProfileCardTest = {
     args:{

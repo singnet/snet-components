@@ -1,4 +1,7 @@
-export const useStyles = (MUITheme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     Userdetails: {
         padding: "12px 18px",
         display: "flex",
@@ -38,4 +41,4 @@ export const useStyles = (MUITheme) => ({
     reactBlockies: {
         borderRadius: 30,
     },
-});
+}));
