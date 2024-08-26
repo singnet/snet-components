@@ -1,12 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-
+import React, { FC } from "react";
+import { RatingsCountProps } from "./RatingsCount.types";
 import { useStyles } from "./styles";
 
-const RatingsCount = ({ ratingGiven, totalRating }) => {
+const RatingsCount: FC<RatingsCountProps> = ({ ratingGiven, totalRating }) => {
     const classes = useStyles();
     const parseRatingGiven = () => {
-        if (!ratingGiven || isNaN(parseFloat(ratingGiven).toFixed(1))) {
+        if (!ratingGiven) {
             return null;
         }
         return ratingGiven;
@@ -16,11 +15,6 @@ const RatingsCount = ({ ratingGiven, totalRating }) => {
             {parseRatingGiven()} ({totalRating ? `${totalRating}` : 0})
         </span>
     );
-};
-
-RatingsCount.propTypes = {
-    ratingGiven: PropTypes.number,
-    totalRating: PropTypes.number,
 };
 
 export default RatingsCount;

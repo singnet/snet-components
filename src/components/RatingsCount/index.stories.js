@@ -1,4 +1,4 @@
-import RatingsCount from './index.js';
+import RatingsCount from './';
 
 export const RatingsCountTest = {
     args:{
