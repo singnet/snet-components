@@ -2,7 +2,7 @@ import { Link } from "@mui/material";
 import React from "react";
 import PropTypes from "prop-types";
 import { useStyles } from "./styles";
-import { MUITheme } from "shared/dist/assets/Theme";
+import { MUITheme } from "../../../assets/Theme";
 
 export const logoVariants = {
     LIGHT: "light",

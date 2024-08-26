@@ -1,8 +1,5 @@
 import SNETLoader from './index.js';
 import React from "react";
-import { withStyles } from "@mui/styles";
-import PropTypes from "prop-types";
-import { DecoratorHelpers } from '@storybook/addon-themes';
 import { BrowserRouter } from 'react-router-dom';
 
 export const SNETLoaderTest = {

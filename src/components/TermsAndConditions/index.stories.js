@@ -5,6 +5,7 @@ import PrivacyTerms from "./PrivacyTerms";
 export default {
     title: "Components/TermsAndConditions",
     component: TermsAndConditions,
+    tags: ['autodocs'],
     argTypes: {
         title: {
             control: { type: "text" },

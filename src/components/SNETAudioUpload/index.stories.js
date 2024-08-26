@@ -1,4 +1,3 @@
-import React from "react";
 import SNETAudioUpload from "./index";
 
 export const DefaultAudioUpload = {
@@ -41,6 +40,7 @@ export const DefaultAudioUpload = {
 export default {
     title: 'Components/SNETAudioUpload',
     component: SNETAudioUpload,
+    tags: ['autodocs'],
     argTypes: {
         width: { control: 'text' },
         tabHeight: { control: 'number' },

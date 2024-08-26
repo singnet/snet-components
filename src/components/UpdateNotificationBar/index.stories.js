@@ -4,6 +4,7 @@ import UpdateNotificationBar from "./index";
 export default {
     title: "Components/UpdateNotificationBar",
     component: UpdateNotificationBar,
+    tags: ['autodocs'],
     argTypes: {
         notificationText: {
             control: { type: "text" },
