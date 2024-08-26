@@ -1,4 +1,4 @@
-import NotificationBar from './index.js';
+import NotificationBar from './NotificationBar';
 
 export const NotificationBarTest = {
     args:{

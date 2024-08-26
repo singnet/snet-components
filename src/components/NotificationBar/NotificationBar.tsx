@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@mui/styles";
 import Grid from "@mui/material/Grid";
@@ -7,13 +7,17 @@ import isEmpty from "lodash/isEmpty";
 
 import { useStyles } from "./styles";
 
-export const notificationBarTypes = {
+import { NotificationBarProps, TypeProps, NotificationProps } from "./NotificationBat.types";
+
+const notificationBarTypes: TypeProps = {
     WARNING: "WARNING",
     INFORMATION: "INFORMATION",
     REMINDER: "REMINDER",
 };
 
-const NotificationBar = ({ classes, showNotification, icon: Icon, message, type }) => {
+const NotificationBar: FC<NotificationBarProps>  = ({ showNotification, Icon, message, type }) => {
+    const classes = useStyles();
+
     if (!showNotification) return null;
     return (
         <Grid container className={classes.NotificationBar}>
@@ -23,20 +27,12 @@ const NotificationBar = ({ classes, showNotification, icon: Icon, message, type 
                 sm={12}
                 md={12}
                 lg={12}
-                className={clsx(classes.notificationText, classes[notificationBarTypes[type]])}
-            >
-                {!isEmpty(Icon) && <Icon />}
+                className={clsx(classes.notificationText, classes[notificationBarTypes[type] as NotificationProps])}>
+                {!isEmpty(Icon) && Icon}
                 <span>{message}</span>
             </Grid>
         </Grid>
     );
 };
 
-NotificationBar.propTypes = {
-    type: PropTypes.oneOf(["WARNING", "INFORMATION", "REMINDER"]),
-    message: PropTypes.string,
-    showNotification: PropTypes.bool,
-    icon: PropTypes.object,
-};
-
-export default withStyles(useStyles)(NotificationBar);
+export default NotificationBar;

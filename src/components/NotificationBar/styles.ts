@@ -1,4 +1,7 @@
-export const useStyles = (MUITheme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     NotificationBar: {
         paddingLeft: "0 !important",
         paddingRight: "0 !important",
@@ -62,4 +65,4 @@ export const useStyles = (MUITheme) => ({
             paddingRight: 10,
         },
     },
-});
+}));
