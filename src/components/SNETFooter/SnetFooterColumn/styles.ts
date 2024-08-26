@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../../assets/ThemeTypes"
 
-export const useStyles = makeStyles((MUITheme) => ({
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     footerColumn: {
         "& ul": {
             listStyle: "none",

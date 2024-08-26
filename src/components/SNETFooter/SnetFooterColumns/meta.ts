@@ -1,4 +1,4 @@
-const footerLinks = {
+export const footerLinks = {
     MAIN_SITE: "https://singularitynet.io/",
     CONTACT_US: "https://singularitynet.io/contact/",
     PRIVACY_POLICY: "https://public.singularitynet.io/privacy_policy.html",

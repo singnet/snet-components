@@ -1,9 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import { Box } from "@mui/material";
 import SnetLogo, { logoVariants } from "../SNETLogo";
 import { useStyles } from "./styles";
+import { FooterColumnProps } from "./FooterColumnProps.types";
 
-const SnetFooterColumn = ({ column }) => {
+const SnetFooterColumn: FC<FooterColumnProps> = ( column ) => {
     const classes = useStyles();
     const columnClassName = column.isPrimary
         ? `${classes.footerColumn}, ${classes.primary}`
@@ -26,8 +27,7 @@ const SnetFooterColumn = ({ column }) => {
 
     const ColumnLinks = () => {
         return (
-            <React.Fragment>
-                <ul className={classes.columnLinks}>
+                <ul>
                     {column.links.map((link) => (
                         <li key={link.key}>
                             <a
@@ -41,7 +41,6 @@ const SnetFooterColumn = ({ column }) => {
                         </li>
                     ))}
                 </ul>
-            </React.Fragment>
         );
     };
 

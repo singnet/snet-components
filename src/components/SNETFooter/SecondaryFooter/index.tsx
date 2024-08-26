@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Grid from '@mui/material/Grid';
-
-import { useStyles } from './styles';
 import SocialIcon from '../SocialIcon';
+import { useStyles } from './styles';
+import { SecondaryFooterProps } from "../SNETFooter.types"
 
-const SecondaryFooter = ({ data }) => {
+const SecondaryFooter:FC<SecondaryFooterProps> = ({ data }) => {
     const classes = useStyles();
     return (
         <Grid container spacing={24} className={classes.secondaryFooter}>
@@ -21,7 +21,11 @@ const SecondaryFooter = ({ data }) => {
             <Grid item xs={12} sm={12} md={6} lg={6}>
                 <ul className={classes.socialIconsList}>
                     {data.map((item) => (
-                        <SocialIcon key={item.title} item={item} />
+                        <SocialIcon key={item.title}
+                            link={item.link}
+                            title={item.title}
+                            className={item.className}
+                        />
                     ))}
                 </ul>
             </Grid>

@@ -1,10 +1,11 @@
-import React from "react";
+import React, {FC} from "react";
 import { Box } from "@mui/material";
 import { columnsMeta } from "./meta";
 import SnetFooterColumn from "../SnetFooterColumn";
 import { useStyles } from "./styles";
+import { FooterCopyrightProps } from "../SNETFooter.types"
 
-const SnetFooterColumns = () => {
+const SnetFooterColumns: FC<FooterCopyrightProps> = () => {
     const classes = useStyles();
     const FooterColumnsContent = () => {
         return (
@@ -17,11 +18,9 @@ const SnetFooterColumns = () => {
     };
 
     return (
-        <React.Fragment>
             <Box className={classes.columnsContainer}>
                 <FooterColumnsContent />
             </Box>
-        </React.Fragment>
     );
 };
 

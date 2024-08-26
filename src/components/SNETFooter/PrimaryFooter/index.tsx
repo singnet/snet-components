@@ -1,12 +1,13 @@
-import React from 'react';
-import { withStyles } from '@mui/styles';
-
+import React, {FC} from 'react';
 import FooterLinks from './FooterLinks';
 import { useStyles } from './styles';
 import FooterLink from '../FooterLink';
 import FooterLogo from './FooterLogo';
+import {PrimaryFooterProps} from "../SNETFooter.types"
 
-const PrimaryFooter = ({ classes, leftData, mainData }) => {
+const PrimaryFooter: FC<PrimaryFooterProps> = ({ leftData, mainData }) => {
+    const classes = useStyles();
+
     return (
         <div className={classes.PrimaryFooter}>
             <div className={classes.LeftData}>
@@ -28,4 +29,4 @@ const PrimaryFooter = ({ classes, leftData, mainData }) => {
     );
 };
 
-export default withStyles(useStyles)(PrimaryFooter);
+export default PrimaryFooter;

@@ -1,6 +1,7 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../../assets/ThemeTypes"
 
-export const useStyles = makeStyles((MUITheme) => ({
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     secondaryFooter: {
         padding: '15px 4px 12px 23px',
         borderTopWidth: 1,

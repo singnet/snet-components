@@ -1,16 +1,12 @@
-import React from "react";
-
+import React, {FC}  from "react";
 import SnetSvgLogo from "../SnetSvgLogo";
+import {FooterLinkProps} from "./SNETFooter.types";
 
-import { useStyles } from "./styles";
-
-const FooterLink = ({ label, link, image, internalLink }) => {
-  const classes = useStyles();
+const FooterLink: FC<FooterLinkProps> = ({ label, link, image, internalLink }) => {
   return (
-    <li className={classes.footerLinks}>
+    <li>
       <a
         href={link}
-        className={classes.footerLinkText}
         title={label}
         target={internalLink ? "_self" : "_blank"}
         rel="noopener noreferrer"

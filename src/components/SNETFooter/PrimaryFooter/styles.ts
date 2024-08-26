@@ -1,4 +1,7 @@
-export const useStyles = () => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../../assets/ThemeTypes"
+
+export const useStyles = makeStyles((MuiTheme: CustomThemeOptions) => ({
   PrimaryFooter: {
     width: "100%",
     display: "flex",
@@ -56,4 +59,4 @@ export const useStyles = () => ({
     },
     "& img": { width: "100%" },
   },
-});
+}));

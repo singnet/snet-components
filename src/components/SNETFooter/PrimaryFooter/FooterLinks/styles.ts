@@ -1,6 +1,7 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../../../assets/ThemeTypes"
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     footerRightSideLinks: {
         display: 'flex',
         padding: '18px 0 0 35px',
@@ -35,7 +36,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     footerLinks: { listStyle: 'none' },
     footerLinkText: {
-        color: theme.palette.text.offWhite,
+        color: MUITheme.palette.text.offWhite,
         textDecoration: 'none',
         lineHeight: '25px',
     },

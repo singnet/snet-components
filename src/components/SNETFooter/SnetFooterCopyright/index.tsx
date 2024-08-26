@@ -1,7 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { useStyles } from "./styles";
+import { FooterCopyrightProps } from "../SNETFooter.types"
 
-const SnetFooterCopyright = () => {
+const SnetFooterCopyright: FC<FooterCopyrightProps> = () => {
     const classes = useStyles();
     const year = new Date().getFullYear();
     return (
