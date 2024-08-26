@@ -1,4 +1,7 @@
-export const useStyles = (theme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
+
+export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     errorMsgContainer: {
         width: "100%",
         margin: "40px 0 60px",
@@ -31,4 +34,4 @@ export const useStyles = (theme) => ({
         borderRadius: 4,
         backgroundColor: "#F6F6F6",
     },
-});
+}));

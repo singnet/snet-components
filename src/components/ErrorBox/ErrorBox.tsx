@@ -1,10 +1,11 @@
-import React from "react";
-import { withStyles } from "@mui/styles";
-import PropTypes from "prop-types";
-import NoConnectionImg from "/src/assets/images/error.svg";
+import React, { FC } from "react";
+import NoConnectionImg from "../../assets/images/error.svg";
 import { useStyles } from "./styles";
+import { ErrorBoxProps } from "./ErrorBox.types";
 
-const ErrorBox = ({ classes, errImg, errText }) => {
+const ErrorBox: FC<ErrorBoxProps> = ({ errImg, errText }) => {
+    const classes = useStyles();
+
     return (
         <div className={classes.errorMsgContainer}>
             <img src={errImg || NoConnectionImg} alt="No connection" />
@@ -17,9 +18,4 @@ const ErrorBox = ({ classes, errImg, errText }) => {
     );
 };
 
-ErrorBox.propTypes = {
-    errImg: PropTypes.string,
-    errText: PropTypes.string,
-};
-
-export default withStyles(useStyles)(ErrorBox);
+export default ErrorBox;
