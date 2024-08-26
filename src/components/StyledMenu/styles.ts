@@ -1,4 +1,7 @@
-export const useStyles = (MUITheme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes"
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     styledMenu: {
         position: "relative",
     },
@@ -20,4 +23,4 @@ export const useStyles = (MUITheme) => ({
             fontSize: 16,
         },
     },
-});
+}));
