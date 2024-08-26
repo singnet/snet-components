@@ -1,8 +1,8 @@
-import InlineLoader from './index.js';
+import InlineLoader from './';
 
 export const InlineLoaderTest = {
-    args:{
-        loading:true,
+    args: {
+        loading: true,
     },
 };
 

@@ -1,4 +1,4 @@
-import ErrorBox from './index.js';
+import ErrorBox from './';
 
 export const ErrorBoxTest = {
     args:{

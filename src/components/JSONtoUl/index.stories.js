@@ -1,13 +1,13 @@
-import GetStarted from './index.js';
+import JSONtoUl from './';
 
-export const GetStartedTest = {
-    args:{
+export const JSONtoUlTest = {
+    args: {
         obj: {},
     },
 };
 
 export default {
-    component: GetStarted,
+    component: JSONtoUl,
     tags: ['autodocs'],
     argTypes: {
         obj: {

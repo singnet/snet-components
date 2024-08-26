@@ -1,4 +1,4 @@
-import OfflineIndicator from './index.js';
+import OfflineIndicator from './';
 
 export const OfflineIndicatorTest = {
     args:{
