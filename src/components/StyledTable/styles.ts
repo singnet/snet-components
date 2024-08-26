@@ -1,4 +1,7 @@
-export const useStyles = (theme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes"
+
+export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     styledTable: { paddingTop: 20 },
     styledTableHeader: {
         color: theme.palette.text.mediumShadeGray,
@@ -53,4 +56,4 @@ export const useStyles = (theme) => ({
             letterSpacing: 0.53,
         },
     },
-});
+}));

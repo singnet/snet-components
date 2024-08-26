@@ -1,4 +1,4 @@
-import StyledTable from './index.js';
+import StyledTable from './';
 
 export const StyledTableTest = {
     args:{
