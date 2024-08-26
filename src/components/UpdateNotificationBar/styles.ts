@@ -1,4 +1,7 @@
-export const useStyles = (MUITheme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     parentUpdateNotificationBar: {
         backgroundColor: MUITheme.palette.purple.main,
     },
@@ -42,4 +45,4 @@ export const useStyles = (MUITheme) => ({
         right: 95,
         cursor: "pointer",
     },
-});
+}));
