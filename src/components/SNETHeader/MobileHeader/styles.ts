@@ -1,4 +1,7 @@
-export const useStyles = (MUITheme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../../assets/ThemeTypes"
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     hamburger: {
         padding: 10,
         marginRight: 25,
@@ -150,4 +153,4 @@ export const useStyles = (MUITheme) => ({
         background: MUITheme.palette.background.white,
         color: MUITheme.palette.text.primary,
     },
-});
+}));

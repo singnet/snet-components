@@ -1,27 +1,31 @@
-import React, { Fragment, useState } from "react";
-import { withStyles } from "@mui/styles";
+import React, { useState, FC, MouseEvent } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-
+import { MobileHeaderProps } from "../SNETHeader.types"
 import HeaderActions from "../HeaderActions";
 import NavItem from "../Navbar/NavItem";
 import { useStyles } from "./styles";
+import { MenuItemProps } from "../../StyledMenu/StyledMenu.types";
 
-const MobileHeader = ({
-    classes,
+const MobileHeader: FC<MobileHeaderProps> = ({
     isLoggedIn,
-    mobileNavLinks,
-    mobileDropDown,
     LoggedInActions,
     LoggedOutActions,
+    mobileNavLinks,
+    mobileDropDown,
     color,
 }) => {
+    const classes = useStyles();
+
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
-    const stopProgationOfEventToHeader = (e) => {
-        e.stopPropagation();
+
+    const stopProgationOfEventToHeader = (event: MouseEvent<HTMLDivElement>): void => {
+        if (event && (event instanceof Event)) {
+            event.stopPropagation();
+        }
     };
 
-    const toggleMobileMenu = (e) => {
-        stopProgationOfEventToHeader(e);
+    const toggleMobileMenu = (event: MouseEvent<HTMLDivElement>): void => {
+        stopProgationOfEventToHeader(event);
         setOpenMobileMenu(!openMobileMenu);
     };
 
@@ -29,7 +33,7 @@ const MobileHeader = ({
         return (
             <div
                 className={`${classes.hamburger} ${color === "white" && classes.whiteHamburger}`}
-                onClick={toggleMobileMenu}
+                onClick={(event) => toggleMobileMenu(event)}
             >
                 <span />
                 <span />
@@ -43,8 +47,8 @@ const MobileHeader = ({
             className={`${classes.mobileNavContainer} ${color === "white" && classes.whiteHeader}`}
             onClick={stopProgationOfEventToHeader}
         >
-            <div className={classes.closeMenuIcon}>
-                <CloseIcon onClick={toggleMobileMenu} />
+            <div className={classes.closeMenuIcon} onClick={toggleMobileMenu}>
+                <CloseIcon />
             </div>
             <nav className={classes.mobileNavigation}>
                 <ul
@@ -52,26 +56,23 @@ const MobileHeader = ({
                 >
                     {mobileNavLinks.map((tab) => (
                         <NavItem
-                            key={tab.label}
-                            title={tab.label}
-                            link={tab.to}
-                            active={tab.active}
+                            key={tab.title}
+                            title={tab.title}
+                            link={tab.link}
+                            isActive={tab.isActive}
                         />
                     ))}
                     {mobileDropDown &&
                         mobileDropDown.map((dropdown) => (
                             <div key={dropdown.label} className={classes.subMenues}>
-                                <Fragment>
-                                    <NavItem title={dropdown.label} subHeader />
-                                    {dropdown.list.map((item) => (
+                                    <NavItem title={dropdown.label} />
+                                    {dropdown.list.map((item: MenuItemProps) => (
                                         <NavItem
                                             key={item.label}
                                             title={item.label}
                                             link={item.link}
-                                            subListItem
                                         />
                                     ))}
-                                </Fragment>
                             </div>
                         ))}
                 </ul>
@@ -80,7 +81,6 @@ const MobileHeader = ({
                         isLoggedIn={isLoggedIn}
                         LoggedInActions={LoggedInActions}
                         LoggedOutActions={LoggedOutActions}
-                        headerType="mobile"
                     />
                 </div>
             </nav>
@@ -88,4 +88,4 @@ const MobileHeader = ({
     );
 };
 
-export default withStyles(useStyles)(MobileHeader);
+export default MobileHeader;
