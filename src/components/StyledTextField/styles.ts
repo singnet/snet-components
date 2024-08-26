@@ -1,4 +1,7 @@
-export const useStyles = (MUITheme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
+
+export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     styledTextField: {
         background: MUITheme.palette.text.white,
         "& label": { color: MUITheme.palette.text.darkGrey },
@@ -19,4 +22,4 @@ export const useStyles = (MUITheme) => ({
             "& fieldset": { borderColor: `${MUITheme.palette.border.secondary} !important` },
         },
     },
-});
+}));
