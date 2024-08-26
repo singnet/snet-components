@@ -1,9 +1,10 @@
-import React from "react";
+import React, {FC} from "react";
 import isEmpty from "lodash/isEmpty";
 import isArray from "lodash/isArray";
 import isObject from "lodash/isObject";
+import { JSONObject } from "./JSONtoUI.types";
 
-const JSONtoUl = (obj) => {
+const JSONtoUl: FC<JSONObject> = (obj) => {
     if (isEmpty(obj)) {
         return null;
     }
