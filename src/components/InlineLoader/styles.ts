@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     pendingSection: {
         display: "flex",
         alignItems: "center",
