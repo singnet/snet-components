@@ -1,9 +1,11 @@
-import React from "react";
+import React, {FC} from "react";
 import { withStyles } from "@mui/styles";
-
 import { useStyles } from "./styles";
+import { CodeSnippetProps } from "./CodeSnippet.types";
 
-const CodeSnippet = ({ classes, children }) => {
+const CodeSnippet: FC<CodeSnippetProps> = ({ children }) => {
+    const classes = useStyles();
+
     return (
         <section className={classes.codeSnippetContainer}>
             <div className={classes.codeSnippet}>{children}</div>
@@ -11,4 +13,4 @@ const CodeSnippet = ({ classes, children }) => {
     );
 };
 
-export default withStyles(useStyles)(CodeSnippet);
+export default CodeSnippet;

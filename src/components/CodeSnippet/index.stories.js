@@ -6,6 +6,7 @@ import { useStyles } from "./styles";
 export default {
   title: "Components/CodeSnippet",
   component: CodeSnippet,
+  tags: "autodocs",
   decorators: [
     (Story) => (
       <div style={{ padding: "20px", backgroundColor: "#f5f5f5" }}>

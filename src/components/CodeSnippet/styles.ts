@@ -1,4 +1,7 @@
-export const useStyles = (theme) => ({
+import { makeStyles } from "@mui/styles";
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
+
+export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     codeSnippetContainer: {
         boxSizing: "border-box",
         width: "100%",
@@ -9,4 +12,4 @@ export const useStyles = (theme) => ({
         fontFamily: "'Space Mono', monospace;",
     },
     codeSnippet: { padding: 10 },
-});
+}));
