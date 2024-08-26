@@ -20,7 +20,6 @@ const backgroundColor: ColorProps = {
 
 const AlertBox: FC<AlertBoxProps> = ({ message, type, link, linkTo, children, icon, header }) => {
     const classes = useStyles();
-
         if (children) {
             return (
                 <div className={clsx(classes.messageBox, classes[backgroundColor[type] as AlertTypesProps])}>

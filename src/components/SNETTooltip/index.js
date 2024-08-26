@@ -3,7 +3,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import { tooltipClasses } from "@mui/material/Tooltip";
-import { styled } from "@mui/styles";
+import { styled } from "@mui/material/styles";
 
 const SNETTooltip = ({ tooltipText, placement }) => {
     const StyledTooltip = styled(({ className, ...props }) => (

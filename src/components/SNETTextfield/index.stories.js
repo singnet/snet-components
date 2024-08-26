@@ -4,6 +4,7 @@ import SNETTextfield from "./index";
 export default {
     title: "Components/SNETTextfield",
     component: SNETTextfield,
+    tags: ['autodocs'],
     argTypes: {
         name: {
             control: { type: "text" },

@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 export default {
     title: "Components/SNETFileUpload",
     component: SNETFileUpload,
+    tags: ['autodocs'],
     decorators: [
         (Story) => (
             <BrowserRouter>

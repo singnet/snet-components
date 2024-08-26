@@ -4,6 +4,7 @@ import SNETSignupConfirm from "./index";
 export default {
     title: "Components/SNETSignupConfirm",
     component: SNETSignupConfirm,
+    tags: ['autodocs'],
     argTypes: {
         info: {
             control: { type: "object" },

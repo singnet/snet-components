@@ -1,4 +1,4 @@
-import MUITheme from "shared/dist/assets/Theme";
+import MUITheme from "../../assets/Theme";
 export const buttonStyleVariants = {
     "red-": {
         color: MUITheme.palette.text.red,

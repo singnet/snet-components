@@ -19,6 +19,7 @@ export const SNETListTest = {
 export default {
     title: "Components/SNETHeader",
     component: SNETHeader,
+    tags: ['autodocs'],
     decorators: [
         (Story) => (
             <BrowserRouter>
