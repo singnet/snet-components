@@ -12,7 +12,7 @@ export interface FooterLinkTitleProps {
 }
 
 export interface FooterCategoryProps {
-    title: FooterLinkTitleProps;
+    title: string;//FooterLinkTitleProps;
     children: FooterLinkProps[];
 }
 
@@ -22,7 +22,7 @@ export interface FooterLinksProps {
 
 export interface PrimaryFooterProps {
     leftData: FooterLinkProps[];
-    mainData: FooterLinksProps;
+    mainData: FooterCategoryProps[];
 }
 
 export interface SocialIconProps {

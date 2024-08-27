@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
-import PropTypes from "prop-types";
+
 import CardHeader from "@mui/material/CardHeader";
 import Card from "@mui/material/Card";
 import Modal from "@mui/material/Modal";

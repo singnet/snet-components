@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
-import { withStyles } from '@mui/styles';
 import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
 import { StyledTableProps } from './StyledTable.types';
 import { useStyles } from './styles';
 

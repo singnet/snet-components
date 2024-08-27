@@ -1,5 +1,4 @@
-import React, {FC} from "react";
-import PropTypes from "prop-types";
+import React, { FC } from "react";
 import Hourglass from "@mui/icons-material/HourglassTopRounded";
 import { InlineLoaderProps } from "./InlineLoader.types";
 import { useStyles } from "./styles";
@@ -7,7 +6,7 @@ import { useStyles } from "./styles";
 const InlineLoader: FC<InlineLoaderProps> = ({ loading }) => {
     const classes = useStyles();
     if (!loading) {
-        null
+        return;
     }
         return (
             <div className={classes.pendingSection}>

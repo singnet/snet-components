@@ -4,7 +4,7 @@ import SnetLogo, { logoVariants } from "../SNETLogo";
 import { useStyles } from "./styles";
 import { FooterColumnProps } from "./FooterColumnProps.types";
 
-const SnetFooterColumn: FC<FooterColumnProps> = ( column ) => {
+const SnetFooterColumn: FC<FooterColumnProps> = ({ column }) => {
     const classes = useStyles();
     const columnClassName = column.isPrimary
         ? `${classes.footerColumn}, ${classes.primary}`

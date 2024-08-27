@@ -8,13 +8,13 @@ export interface ColorsProps {
 
 export type ColorProps = ValueOf<ColorsProps>
 
-export type SnetSvgLogo = {
+export type SnetSvgLogoProps = {
     [key in ColorProps]: string;
 };
 
 export interface NavItemProps {
     title: string;
-    link?: string;
+    link: string;
     isActive?: boolean;
     openInNewTab?: boolean;
 }
@@ -32,7 +32,7 @@ export interface HeaderActionsProps {
 
 export interface NavBarProps {
     navbarItems: NavItemProps[];
-    dropdown: DropdownNavItemProps[];
+    dropdownNavbarItems: DropdownNavItemProps[];
 }
 
 export interface MobileHeaderProps extends HeaderActionsProps {

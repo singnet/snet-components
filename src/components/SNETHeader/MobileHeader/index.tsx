@@ -65,7 +65,7 @@ const MobileHeader: FC<MobileHeaderProps> = ({
                     {mobileDropDown &&
                         mobileDropDown.map((dropdown) => (
                             <div key={dropdown.label} className={classes.subMenues}>
-                                    <NavItem title={dropdown.label} />
+                                    <div>{dropdown.label}</div>
                                     {dropdown.list.map((item: MenuItemProps) => (
                                         <NavItem
                                             key={item.label}

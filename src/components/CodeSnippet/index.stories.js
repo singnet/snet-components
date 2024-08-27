@@ -1,34 +1,37 @@
-import React from "react";
-import { withStyles } from "@mui/styles";
-import CodeSnippet from "./";
-import { useStyles } from "./styles";
+import React from 'react';
+import CodeSnippet from './CodeSnippet';
+
+export const CodeSnippetArgs = {
+    args: {
+        children: <div>Hello world!</div>,
+    },
+};
 
 export default {
-  title: "Components/CodeSnippet",
-  component: CodeSnippet,
-  tags: "autodocs",
-  decorators: [
-    (Story) => (
-      <div style={{ padding: "20px", backgroundColor: "#f5f5f5" }}>
-        <Story />
-      </div>
-    ),
-  ],
-  argTypes: {
-    children: { control: "text" },
-  },
+    title: 'Components/CodeSnippet',
+    component: CodeSnippetArgs,
+    tags: ['autodocs'],
+    decorators: [
+        (Story) => (
+            <div style={{ padding: '20px', backgroundColor: '#f5f5f5' }}>
+                <Story />
+            </div>
+        ),
+    ],
+    argTypes: {
+        children: { control: 'text' },
+    },
 };
 
-const StyledCodeSnippet = withStyles(useStyles)(CodeSnippet);
+// const StyledCodeSnippet = CodeSnippet;
 
-const Template = (args) => <StyledCodeSnippet {...args} />;
+// const Template = (args) => <StyledCodeSnippet {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  children: `
-    const helloWorld = () => {
-      console.log("Hello, world!");
-    };
-  `,
-};
-
+// export const Default = Template.bind({});
+// Default.args = {
+//     children: `
+//     const helloWorld = () => {
+//       console.log("Hello, world!");
+//     };
+//   `,
+// };
