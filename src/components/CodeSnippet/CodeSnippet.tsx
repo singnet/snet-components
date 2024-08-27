@@ -1,5 +1,4 @@
-import React, {FC} from "react";
-import { withStyles } from "@mui/styles";
+import React, { FC } from "react";
 import { useStyles } from "./styles";
 import { CodeSnippetProps } from "./CodeSnippet.types";
 

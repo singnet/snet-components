@@ -1,6 +1,4 @@
 import React, { Fragment, FC } from "react";
-import PropTypes from "prop-types";
-
 import { useStyles } from "./styles";
 import StatusToggler from "./StatusToggler";
 

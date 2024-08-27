@@ -1,5 +1,12 @@
 import { ReactNode } from "react";
 
+export interface AlertTypes {
+    ERROR: 'error',
+    SUCCESS: 'success',
+    WARNING: 'warning',
+    INFO: 'info',
+};
+
 export interface AlertProps {
     message: string;
     type: AlertTypesProps;
@@ -20,4 +27,4 @@ export interface ColorProps {
     info: string;
 }
 
-export type AlertTypesProps = keyof ColorProps;
+export type AlertTypesProps = ValueOf<AlertTypes>;

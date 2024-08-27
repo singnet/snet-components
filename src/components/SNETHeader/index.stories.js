@@ -1,5 +1,5 @@
 import React from "react";
-import SNETHeader from "./index";
+import SNETHeader from "./SNETHeader";
 import { BrowserRouter } from "react-router-dom";
 
 export const SNETListTest = {

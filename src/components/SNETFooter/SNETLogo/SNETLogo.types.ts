@@ -6,5 +6,5 @@ export interface LogoVariants {
 export interface LogoProps {
     variant: ValueOf<LogoVariants>,
     additionalClassName: string,
-    path: string,
+    path?: string,
 }

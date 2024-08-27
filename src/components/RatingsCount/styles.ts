@@ -1,7 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import { CustomThemeOptions } from "../../assets/ThemeTypes"
 
-export const useStyles = makeStyles((MuiTheme: CustomThemeOptions) => ({
+export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     ratedCount: {
         marginLeft: 10,
         display: "inline-block",

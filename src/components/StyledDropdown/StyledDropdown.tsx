@@ -4,7 +4,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import InfoIcon from "@mui/icons-material/Info";
-import PropTypes from "prop-types";
+
 import { StyledDropdownProps } from "./StyledDropdown.types";
 import { useStyles } from "./styles";
 

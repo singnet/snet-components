@@ -3,11 +3,11 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useStyles } from "./styles";
-import { SnetSvgLogo, LogoProps } from "../SNETHeader.types";
+import { SnetSvgLogoProps, LogoProps } from "../SNETHeader.types";
 import SnetBlackLogo from "../../../assets/images/BlackLogo.svg";
 import SnetWhiteLogo from "../../../assets/images/WhiteLogo.svg";
 
-const SnetSvgLogo: SnetSvgLogo = {
+const SnetSvgLogo: SnetSvgLogoProps = {
     white: SnetBlackLogo,
     purple: SnetWhiteLogo,
 };

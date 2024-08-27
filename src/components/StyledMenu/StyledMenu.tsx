@@ -1,7 +1,6 @@
 import React, { useState, FC, MouseEvent } from 'react';
 import Menu from '@mui/material/Menu';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import CaretIcon from '@mui/icons-material/ArrowDropDown';
 import { StyledMenuProps } from './StyledMenu.types';

@@ -13,7 +13,7 @@ const SnetLogo: FC<LogoProps> = ({ variant, path, additionalClassName = '' }) =>
     const classes = useStyles();
     const color =
         variant === logoVariants.LIGHT
-            ? MUITheme.palette.text.white //TODO: TypeError
+            ? MUITheme.palette.text.white
             : MUITheme.palette.text.darkGrey;
 
     return (

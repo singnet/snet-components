@@ -1,11 +1,14 @@
 export interface FooterLinkProps {
     href: string;
-    key: string;
+    key: number;
     label: string;
 }
 
 export interface FooterColumnProps {
-    isPrimary: boolean;
-    title: string;
-    links: FooterLinkProps[]
+    column: {
+        key: number;
+        isPrimary: boolean;
+        title: string;
+        links: FooterLinkProps[]
+    }
 }

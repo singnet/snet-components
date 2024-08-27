@@ -1,6 +1,4 @@
 import React, { FC } from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@mui/styles";
 import Grid from "@mui/material/Grid";
 import clsx from "clsx";
 import isEmpty from "lodash/isEmpty";
