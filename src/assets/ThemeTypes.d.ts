@@ -2,9 +2,6 @@ import { Theme, ThemeOptions } from '@mui/material/styles';
 
 declare module '@mui/material/styles' {
   interface CustomTheme extends Theme {
-  // }
-  // // allow configuration using `createTheme`
-  // interface CustomThemeOptions extends ThemeOptions {
     breakpoints: {
 
     };
@@ -75,4 +72,4 @@ declare module '@mui/material/styles' {
   export function createTheme(options?: CustomThemeOptions): CustomTheme;
 }
 
-export {CustomThemeOptions}
+export { CustomThemeOptions, CustomTheme };

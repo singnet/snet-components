@@ -17,7 +17,9 @@ const AlertText: FC<AlertProps> = ({ type = "error", message }) => {
     if (!message) {
         return null;
     }
-    return <span className={clsx(classes.errorMsg, classes[textColor[type] as AlertTypesProps])}>{message}</span>;
+    return (
+        <span className={clsx(classes.errorMsg, classes[textColor[type] as AlertTypesProps])}>{message}</span>
+    );
 };
 
 export default AlertText;

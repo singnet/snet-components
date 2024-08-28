@@ -65,4 +65,4 @@ const SnetDialog: FC<SNETDialogProps> = ({
     );
 };
 
-export default (SnetDialog);
+export default SnetDialog;
