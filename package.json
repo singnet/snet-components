@@ -11,13 +11,13 @@
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
     "@mui/styles": "^5.16.7",
-    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.105",
     "@types/react-dom": "^18.3.0",
+    "clsx": "^2.1.1",
     "html-react-parser": "^5.1.12",
+    "lodash": "^4.17.21",
     "react-dropzone": "^14.2.3",
     "react-file-drop": "^3.1.6",
     "react-router-dom": "^6.26.1",
@@ -27,10 +27,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --fix",
     "rollup": "rollup -c --bundleConfigAsCjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -38,7 +36,6 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
       "plugin:storybook/recommended"
     ]
   },
@@ -58,6 +55,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.7.0",
     "@rollup/plugin-commonjs": "^26.0.1",
@@ -76,8 +74,22 @@
     "@storybook/react-webpack5": "^8.2.9",
     "@storybook/test": "^8.2.9",
     "@types/react": "^18.3.4",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
     "ajv": "^8.17.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-storybook": "^0.8.0",
+    "prettier": "3.3.3",
     "prop-types": "^15.8.1",
     "rollup": "^4.21.0",
     "rollup-plugin-dts": "^6.1.1",

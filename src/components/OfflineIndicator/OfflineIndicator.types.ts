@@ -1,3 +1,3 @@
 export interface OfflineIndicatorProps {
-    show: boolean;
+  show: boolean;
 }

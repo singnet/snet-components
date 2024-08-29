@@ -6,63 +6,55 @@ import { Typography, Box, DialogContent, Dialog, IconButton } from "@mui/materia
 import { SNETDialogProps } from "./SNETDialog.types";
 
 const SnetDialog: FC<SNETDialogProps> = ({
-    isDialogOpen,
-    title,
-    children,
-    showCloseButton = true,
-    disableBackdropClick,
-    disableEscapeKeyDown,
-    contentClass,
-    onDialogClose = () => {},
+  isDialogOpen,
+  title,
+  children,
+  showCloseButton = true,
+  disableBackdropClick,
+  disableEscapeKeyDown,
+  contentClass,
+  onDialogClose = () => {
+    console.log("onDialogClose");
+  },
 }) => {
-    const isMobile = window.screen.width <= 550; //px
-    const classes = useStyles();
-    // eslint-disable-next-line no-unused-vars
-    const handleDialogClose = (event: {}, reason: string): void => {
-        if (disableBackdropClick && reason === "backdropClick") {
-            return;
-        }
-
-        if (disableEscapeKeyDown && reason === "escapeKeyDown") {
-            return;
-        }
-        onDialogClose();
-    };
-
-    if (isMobile) {
-        return (
-            <MobileDialog
-                isDialogOpen={isDialogOpen}
-                onDialogClose={onDialogClose}
-                title={title}
-                children={children}
-            />
-        );
+  const isMobile = window.screen.width <= 550; //px
+  const classes = useStyles();
+  // eslint-disable-next-line
+  const handleDialogClose = (event: {}, reason: string): void => {
+    if (disableBackdropClick && reason === "backdropClick") {
+      return;
     }
 
-    return (
-        <Dialog
-            maxWidth="xl"
-            onClose={(event, reason) => handleDialogClose(event, reason)}
-            aria-labelledby="snet-dialog-title"
-            open={isDialogOpen}
-        >
-            <Box className={classes.dialogTitle}>
-                <Typography className={classes.titleText}>{title}</Typography>
-                {showCloseButton && (
-                    <IconButton
-                        onClick={onDialogClose}
-                        classes={classes.iconButton}
-                    >
-                        <CloseIcon />
-                    </IconButton>
-                )}
-            </Box>
-            <DialogContent dividers className={`${classes.dailogContent}, ${contentClass}`}>
-                {children}
-            </DialogContent>
-        </Dialog>
-    );
+    if (disableEscapeKeyDown && reason === "escapeKeyDown") {
+      return;
+    }
+    onDialogClose();
+  };
+
+  if (isMobile) {
+    return <MobileDialog isDialogOpen={isDialogOpen} onDialogClose={onDialogClose} title={title} children={children} />;
+  }
+
+  return (
+    <Dialog
+      maxWidth="xl"
+      onClose={(event, reason) => handleDialogClose(event, reason)}
+      aria-labelledby="snet-dialog-title"
+      open={isDialogOpen}
+    >
+      <Box className={classes.dialogTitle}>
+        <Typography className={classes.titleText}>{title}</Typography>
+        {showCloseButton && (
+          <IconButton onClick={onDialogClose} classes={classes.iconButton}>
+            <CloseIcon />
+          </IconButton>
+        )}
+      </Box>
+      <DialogContent dividers className={`${classes.dailogContent}, ${contentClass}`}>
+        {children}
+      </DialogContent>
+    </Dialog>
+  );
 };
 
 export default SnetDialog;

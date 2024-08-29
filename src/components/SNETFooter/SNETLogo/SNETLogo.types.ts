@@ -1,10 +1,10 @@
 export interface LogoVariants {
-    LIGHT: 'light',
-    DARK: 'dark',
+  LIGHT: "light";
+  DARK: "dark";
 }
 
 export interface LogoProps {
-    variant: ValueOf<LogoVariants>,
-    additionalClassName: string,
-    path?: string,
+  variant: ValueOf<LogoVariants>;
+  additionalClassName: string;
+  path?: string;
 }

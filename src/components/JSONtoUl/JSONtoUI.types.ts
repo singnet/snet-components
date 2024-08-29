@@ -1,9 +1,5 @@
-type JSONValue =
-    | string
-    | number
-    | boolean
-    | JSONObject;
+type JSONValue = string | number | boolean | JSONObject;
 
 export interface JSONObject {
-    [x: string]: JSONValue;
+  [x: string]: JSONValue;
 }

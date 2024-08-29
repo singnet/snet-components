@@ -3,13 +3,13 @@ import { useStyles } from "./styles";
 import { CodeSnippetProps } from "./CodeSnippet.types";
 
 const CodeSnippet: FC<CodeSnippetProps> = ({ children }) => {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <section className={classes.codeSnippetContainer}>
-            <div className={classes.codeSnippet}>{children}</div>
-        </section>
-    );
+  return (
+    <section className={classes.codeSnippetContainer}>
+      <div className={classes.codeSnippet}>{children}</div>
+    </section>
+  );
 };
 
 export default CodeSnippet;

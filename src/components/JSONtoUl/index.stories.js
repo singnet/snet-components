@@ -1,18 +1,18 @@
-import JSONtoUl from './';
+import JSONtoUl from "./";
 
 export const JSONtoUlTest = {
-    args: {
-        obj: {},
-    },
+  args: {
+    obj: {},
+  },
 };
 
 export default {
-    component: JSONtoUl,
-    tags: ['autodocs'],
-    argTypes: {
-        obj: {
-            default: {},
-            control: { type: 'object' },
-        },
+  component: JSONtoUl,
+  tags: ["autodocs"],
+  argTypes: {
+    obj: {
+      default: {},
+      control: { type: "object" },
     },
+  },
 };

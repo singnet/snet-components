@@ -1,3 +1,3 @@
 export interface StyledLinearProgressProps {
-    value: number;
+  value: number;
 }

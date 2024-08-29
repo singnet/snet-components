@@ -13,10 +13,10 @@ export default [
   {
     input: ["src/index.ts", ...getFiles("./src/components", extensions, excludingFiles)],
     output: {
-      dir: 'dist',
-      format: 'esm',
+      dir: "dist",
+      format: "esm",
       preserveModules: true,
-      preserveModulesRoot: 'src',
+      preserveModulesRoot: "src",
       sourcemap: true,
     },
     plugins: [
@@ -24,9 +24,9 @@ export default [
       resolve(),
       commonjs(),
       typescript({
-        tsconfig: './tsconfig.build.json',
+        tsconfig: "./tsconfig.build.json",
         declaration: true,
-        declarationDir: 'dist',
+        declarationDir: "dist",
       }),
       terser(),
       image(),

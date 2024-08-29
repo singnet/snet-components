@@ -1,3 +1,3 @@
 export interface InlineLoaderProps {
-    loading: boolean
+  loading: boolean;
 }

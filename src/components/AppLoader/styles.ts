@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import { CustomThemeOptions } from "../../assets/ThemeTypes"
+import { CustomThemeOptions } from "../../assets/ThemeTypes";
 
 export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
   card: {

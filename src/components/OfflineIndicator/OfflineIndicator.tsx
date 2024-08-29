@@ -4,17 +4,17 @@ import { OfflineIndicatorProps } from "./OfflineIndicator.types";
 import { useStyles } from "./styles";
 
 const OfflineIndicator: FC<OfflineIndicatorProps> = ({ show }) => {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    if (!show) {
-        return null;
-    }
-    return (
-        <div className={classes.offlineIndicator}>
-            <PriorityHighRounded/>
-            <span>Currently Offline</span>
-        </div>
-    )
+  if (!show) {
+    return null;
+  }
+  return (
+    <div className={classes.offlineIndicator}>
+      <PriorityHighRounded />
+      <span>Currently Offline</span>
+    </div>
+  );
 };
 
 export default OfflineIndicator;

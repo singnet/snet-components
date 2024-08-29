@@ -1,5 +1,5 @@
 export interface StyledTextFieldProps {
-    label: string;
-    handleChange: () => void;
-    value: string;
+  label: string;
+  handleChange: () => void;
+  value: string;
 }

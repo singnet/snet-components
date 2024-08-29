@@ -4,15 +4,15 @@ import { useStyles } from "./styles";
 import FooterLink from "../../FooterLink";
 import FooterLinkTitle from "../../FooterLinkTitle";
 
-const FooterLinks: FC<FooterLinksProps>  = ({ data }) => {
+const FooterLinks: FC<FooterLinksProps> = ({ data }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.footerRightSideLinks}>
-      {data.map(item => (
+      {data.map((item) => (
         <ul key={item.title} className={classes.footerLinksList}>
           <FooterLinkTitle title={item.title} />
-          {item.children.map(child => (
+          {item.children.map((child) => (
             <FooterLink
               key={child.label}
               image={child.image}

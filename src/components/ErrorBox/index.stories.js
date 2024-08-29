@@ -1,23 +1,23 @@
-import ErrorBox from './';
+import ErrorBox from "./";
 
 export const ErrorBoxTest = {
-    args:{
-        errImg:"",
-        errText:''
-    },
+  args: {
+    errImg: "",
+    errText: "",
+  },
 };
 
 export default {
-    component: ErrorBox,
-    tags: ['autodocs'],
-    argTypes: {
-        errImg: {
-            default: '',
-            control: { type: 'text' },
-        },
-        errText: {
-            default: '',
-            control: { type: 'text' },
-        },
+  component: ErrorBox,
+  tags: ["autodocs"],
+  argTypes: {
+    errImg: {
+      default: "",
+      control: { type: "text" },
     },
+    errText: {
+      default: "",
+      control: { type: "text" },
+    },
+  },
 };
