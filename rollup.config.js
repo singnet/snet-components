@@ -2,32 +2,32 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import image from "@rollup/plugin-image";
-import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import { getFiles } from "./scripts/buildUtils";
 
-const packageJson = require("./package.json");
+const extensions = [".js", ".ts", ".jsx", ".tsx"];
+const excludingFiles = [".stories.js"];
 
 export default [
   {
-    input: "src/index.ts",
-    output: [
-      {
-        file: packageJson.main,
-        format: "cjs",
-        sourcemap: true,
-      },
-      {
-        file: packageJson.module,
-        format: "esm",
-        sourcemap: true,
-      },
-    ],
+    input: ["src/index.ts", ...getFiles("./src/components", extensions, excludingFiles)],
+    output: {
+      dir: 'dist',
+      format: 'esm',
+      preserveModules: true,
+      preserveModulesRoot: 'src',
+      sourcemap: true,
+    },
     plugins: [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: './tsconfig.build.json',
+        declaration: true,
+        declarationDir: 'dist',
+      }),
       terser(),
       image(),
     ],
@@ -45,10 +45,5 @@ export default [
       "@mui/material/styles",
       "@mui/styles",
     ],
-  },
-  {
-    input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "es" }],
-    plugins: [dts.default()],
   },
 ];
