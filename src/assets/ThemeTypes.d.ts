@@ -13,39 +13,26 @@ declare module "@mui/material/styles" {
         primary: string;
         secondary: string;
         disabled: string;
-        statusRed: string;
         red: string;
         darkGrey: string;
         lightGrey: string;
-        footerText: string;
         white: string;
-        black: string;
         hover: {
           blue: string;
-          red: string;
           black: string;
-          dark: string;
         };
       };
       primary: {
         main: string;
-        dark: string;
-      };
-      secondary: {
-        main: string;
-        dark: string;
       };
       purple: {
         main: string;
-        light: string;
       };
       background: {
-        disabled: { gray: string; lightGray: string };
+        disabled: { gray: string; };
         hover: {
           blue: string;
           red: string;
-          redLight: string;
-          black: string;
         };
         grey: string;
         mainContent: string;
@@ -59,9 +46,7 @@ declare module "@mui/material/styles" {
         infoBox: string;
       };
       border: {
-        primary: string;
         secondary: string;
-        mainContent: string;
         alertBox: string;
         warningBox: string;
         grey: string;
@@ -71,7 +56,6 @@ declare module "@mui/material/styles" {
       error: { main: string };
       infoBoxLink: string;
     };
-    warning: { main: string };
   }
   export function createTheme(options?: CustomThemeOptions): CustomTheme;
 }
