@@ -42,7 +42,7 @@ import AlertBox from "snet-components-dapp/components/AlertBox";
 ```
 
 <div style="background-color:#f9f9f9; padding:15px; border-left:5px solid #4CAF50;">
-    <strong>Note:</strong> These components are designed to automatically adapt to your Material-UI (MUI) theme. However, if you're developing an AI service specifically for the Marketplace, the components will adopt the Marketplace's predefined theme, ensuring a consistent look and feel. Make sure your theme is aligned with the configurations specified in the <a href="snet-dapp-components/src/assets/ThemeTypes.d.ts" target="_blank">ThemeTypes.d.ts</a> file.
+    <strong>Note:</strong> These components are designed to automatically adapt to your Material-UI (MUI) theme. However, if you're developing an AI service specifically for the Marketplace, the components will adopt the Marketplace's predefined theme, ensuring a consistent look and feel. Make sure your theme is aligned with the configurations specified in the <a href="./src/assets/ThemeTypes.d.ts" target="_blank">ThemeTypes.d.ts</a> file.
 </div>
 
 ## Development Guide
