@@ -29,7 +29,7 @@ const SNETHeader: FC<SNETHeaderProps> = ({
       className={`${classes.snetHeader} ${color === colorHeader.PURPLE ? classes.purpleHeader : classes.whiteHeader}`}
     >
       <Box className={classes.appBar}>
-        {isMobileHeaderVisible && (
+        {isMobileHeaderVisible && LoggedInActions && LoggedOutActions && (
           <MobileHeader
             mobileNavLinks={navbarItems}
             mobileDropDown={dropdownNavbarItems}
@@ -41,7 +41,7 @@ const SNETHeader: FC<SNETHeaderProps> = ({
         )}
         <Logo className={classes.logoContainer} color={color} portalName={portalName} onLogoClick={onLogoClick} />
         <NavBar className={classes.navContainer} navbarItems={navbarItems} dropdownNavbarItems={dropdownNavbarItems} />
-        <div className={classes.headerActionsContainer}>
+          <div className={classes.headerActionsContainer}>
           <HeaderActions
             isLoggedIn={isLoggedIn}
             LoggedInActions={LoggedInActions}

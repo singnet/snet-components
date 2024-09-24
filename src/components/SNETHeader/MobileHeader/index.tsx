@@ -65,13 +65,14 @@ const MobileHeader: FC<MobileHeaderProps> = ({
               </div>
             ))}
         </ul>
+        {LoggedInActions && LoggedOutActions && 
         <div className={classes.mobileActionBtns}>
           <HeaderActions
             isLoggedIn={isLoggedIn}
             LoggedInActions={LoggedInActions}
             LoggedOutActions={LoggedOutActions}
           />
-        </div>
+        </div>}
       </nav>
     </div>
   );

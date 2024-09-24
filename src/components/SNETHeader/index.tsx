@@ -1,1 +1,1 @@
-export { default } from "./SNETHeader";
+export { default, colorHeader } from "./SNETHeader";

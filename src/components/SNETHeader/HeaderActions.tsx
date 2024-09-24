@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { HeaderActionsProps } from "./SNETHeader.types";
 
 const HeaderActions: FC<HeaderActionsProps> = ({ isLoggedIn, LoggedInActions, LoggedOutActions }) => {
   if (isLoggedIn) {
-    return <LoggedInActions />;
+    return LoggedInActions;
   }
-  return <LoggedOutActions />;
+  return LoggedOutActions;
 };
 
 export default HeaderActions;

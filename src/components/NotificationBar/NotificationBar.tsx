@@ -7,7 +7,7 @@ import { useStyles } from "./styles";
 
 import { NotificationBarProps, TypeProps, NotificationProps } from "./NotificationBat.types";
 
-const notificationBarTypes: TypeProps = {
+export const notificationBarTypes: TypeProps = {
   WARNING: "WARNING",
   INFORMATION: "INFORMATION",
   REMINDER: "REMINDER",

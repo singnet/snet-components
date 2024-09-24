@@ -1,4 +1,4 @@
-export { default as AlertBox } from "./AlertBox";
+export { default as AlertBox, alertTypes } from "./AlertBox";
 export { default as AlertText } from "./AlertText";
 export { default as AnchorLink } from "./AnchorLink";
 export { default as AppLoader } from "./AppLoader";
@@ -13,7 +13,7 @@ export { default as ProgressBar } from "./ProgressBar";
 export { default as RatingsCount } from "./RatingsCount";
 export { default as SNETDialog } from "./SNETDialog";
 export { default as SNETFooter } from "./SNETFooter";
-export { default as SNETHeader } from "./SNETHeader";
+export { default as SNETHeader, colorHeader } from "./SNETHeader";
 export { default as StyledButton } from "./StyledButton";
 export { default as StyledDropdown } from "./StyledDropdown";
 export { default as StyledLinearProgress } from "./StyledLinearProgress";

@@ -7,9 +7,9 @@ export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     borderStyle: "solid",
     borderColor: "transparent",
     padding: "13px 28px 11px",
-    color: theme.palette.text.secondary,
+    color: `${theme.palette.text.white} !important`,
     textTransform: "uppercase",
-    fontWeight: 600,
+    fontWeight: 500,
     letterSpacing: "1.25px",
     lineHeight: "16px",
     "&:disabled": {
@@ -18,6 +18,7 @@ export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     },
   },
   blueBg: {
+    color: theme.palette.text.white,
     backgroundColor: theme.palette.primary.main,
     "&:hover": { backgroundColor: theme.palette.text.hover.blue },
   },
@@ -35,7 +36,7 @@ export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
   },
   transparentBg: {
     backgroundColor: "transparent",
-    color: theme.palette.text.primary,
+    color: theme.palette.text.white,
     "&:disabled": {
       color: `${theme.palette.text.disabled} !important`,
       backgroundColor: "transparent",

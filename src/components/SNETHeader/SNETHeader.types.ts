@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { ReactNode } from "react";
 import { MenuItemProps } from "../StyledMenu/StyledMenu.types";
 
 export interface ColorsProps {
@@ -26,8 +26,8 @@ export interface DropdownNavItemProps {
 
 export interface HeaderActionsProps {
   isLoggedIn: boolean;
-  LoggedInActions: FC;
-  LoggedOutActions: FC;
+  LoggedInActions: ReactNode;
+  LoggedOutActions: ReactNode;
 }
 
 export interface NavBarProps {
