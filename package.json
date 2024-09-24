@@ -1,5 +1,5 @@
 {
-  "name": "snet-components",
+  "name": "snet-dapp-components",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,9 +8,9 @@
     "@fontsource/material-icons": "^5.0.19",
     "@fontsource/montserrat": "^5.0.19",
     "@fontsource/muli": "^4.1.0",
-    "@mui/icons-material": "^5.16.7",
-    "@mui/material": "^5.16.7",
-    "@mui/styles": "^5.16.7",
+    "@mui/icons-material": "^6.1.1",
+    "@mui/material": "^6.1.1",
+    "@mui/styles": "^6.1.1",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/node": "^16.18.105",
