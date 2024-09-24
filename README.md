@@ -19,11 +19,11 @@ This library is crafted to be both flexible and powerful, integrating seamlessly
 
 Ensure your development environment meets the following Node.js version requirements:
 
-| Version Node.js | Support    |
-|-----------------|------------|
-| ^18.18.0        | ✅ Yes     |
-| ^20.9.0         | ✅ Yes     |
-| >= 21.1.0       | ✅ Yes     |
+| Version Node.js | Support |
+| --------------- | ------- |
+| ^18.18.0        | ✅ Yes  |
+| ^20.9.0         | ✅ Yes  |
+| >= 21.1.0       | ✅ Yes  |
 
 ### Installing the Library
 
@@ -38,7 +38,7 @@ npm install snet-dapp-components
 Once installed, you can easily import and use the components in your project. Here's a simple example:
 
 ```js
-import AlertBox from "snet-components-dapp/components/AlertBox";
+import AlertBox from "snet-dapp-components/components/AlertBox";
 ```
 
 <div style="background-color:#f9f9f9; padding:15px; border-left:5px solid #4CAF50;">
