@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
     borderStyle: "solid",
     borderColor: "transparent",
     padding: "13px 28px 11px",
-    color: `${theme.palette.text.white} !important`,
+    color: theme.palette.text.main,
     textTransform: "uppercase",
     fontWeight: 500,
     letterSpacing: "1.25px",
@@ -36,7 +36,7 @@ export const useStyles = makeStyles((theme: CustomThemeOptions) => ({
   },
   transparentBg: {
     backgroundColor: "transparent",
-    color: theme.palette.text.white,
+    color: `${theme.palette.primary.main} !important`,
     "&:disabled": {
       color: `${theme.palette.text.disabled} !important`,
       backgroundColor: "transparent",
