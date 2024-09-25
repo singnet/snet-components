@@ -32,7 +32,6 @@ export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     },
   },
   formControl: {
-    width: 364,
     paddingLeft: 23,
     "& label": {
       padding: "0 20px 0 10px",
