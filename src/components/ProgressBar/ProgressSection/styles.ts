@@ -5,8 +5,8 @@ export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
   numberStep: {
     width: 28,
     borderRadius: 25,
-    backgroundColor: MUITheme.palette.text.lightGrey,
     color: MUITheme.palette.text.white,
+    backgroundColor: MUITheme.palette.text.lightGrey,
     lineHeight: "28px",
     "& span": {
       "&::after": {
@@ -30,13 +30,12 @@ export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
         padding: 3,
         borderRadius: 25,
         color: MUITheme.palette.text.white,
-        fontSize: 22,
+        fontSize: 28,
       },
     },
   },
   numberContainer: {
     padding: "0 10px",
-    background: "rgb(250, 250, 250)",
   },
   TabTitle: {
     paddingTop: 10,
@@ -99,7 +98,7 @@ export const useStyles = makeStyles((MUITheme: CustomThemeOptions) => ({
     },
   },
   idle: {
-    background: "transparent",
+    backgroundColor: MUITheme.palette.text.lightGrey,
   },
   clickableSection: {
     cursor: "pointer",
