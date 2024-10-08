@@ -62,7 +62,7 @@ npm install
 
 Here are some useful scripts to help you contribute to the project:
 
-### `npm run rollup`
+### `npm run build`
 
 This script builds the distribution files after making changes to the repository. It's essential to run this command to ensure your changes are correctly compiled.
 
