@@ -8,6 +8,9 @@
     "@fontsource/material-icons": "^5.0.19",
     "@fontsource/montserrat": "^5.0.19",
     "@fontsource/muli": "^4.1.0",
+    "@mui/icons-material": "^6.1.4",
+    "@mui/material": "^6.1.4",
+    "@mui/styles": "^6.1.4",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/node": "^16.18.105",
@@ -19,7 +22,6 @@
     "react-file-drop": "^3.1.6",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
-    "react-swipeable-views": "^0.14.0",
     "validate.js": "^0.13.1",
     "web-vitals": "^2.1.4"
   },
@@ -99,10 +101,7 @@
   },
   "peerDependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@mui/icons-material": "^6.1.1",
-    "@mui/material": "^6.1.1",
-    "@mui/styles": "^6.1.1"
+    "react-dom": "^18.3.1"
   },
   "keywords": [
     "ui",
