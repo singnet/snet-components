@@ -1,4 +1,5 @@
 import React from "react";
+import CodeSnippet from "./CodeSnippet";
 
 export const CodeSnippetArgs = {
   args: {
@@ -8,18 +9,8 @@ export const CodeSnippetArgs = {
 
 export default {
   title: "Components/CodeSnippet",
-  component: CodeSnippetArgs,
+  component: CodeSnippet,
   tags: ["autodocs"],
-  decorators: [
-    (Story) => (
-      <div style={{ padding: "20px", backgroundColor: "#f5f5f5" }}>
-        <Story />
-      </div>
-    ),
-  ],
-  argTypes: {
-    children: { control: "text" },
-  },
 };
 
 // const StyledCodeSnippet = CodeSnippet;
@@ -28,9 +19,7 @@ export default {
 
 // export const Default = Template.bind({});
 // Default.args = {
-//     children: `
-//     const helloWorld = () => {
-//       console.log("Hello, world!");
-//     };
-//   `,
+//   children:
+//   <div>Hello wotrld</div>
+//   ,
 // };

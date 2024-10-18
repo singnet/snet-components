@@ -36,7 +36,7 @@ const Template = (args) => {
 
   const handleCloseClick = () => {
     setShowNotification(false);
-    args.onCloseClick();
+    args?.onCloseClick();
   };
 
   return <UpdateNotificationBar {...args} showNotification={showNotification} onCloseClick={handleCloseClick} />;
@@ -50,7 +50,4 @@ Default.args = {
     text: "Learn more",
   },
   showNotification: true,
-  onCloseClick: () => {
-    console.log("close");
-  },
 };

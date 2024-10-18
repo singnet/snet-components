@@ -5,6 +5,10 @@ import { useStyles } from "./styles";
 
 const StyledTable: FC<StyledTableProps> = ({ title, columns, rows }) => {
   const classes = useStyles();
+  if (!columns || !rows) {
+    return null
+  }
+  
   return (
     <div className={classes.styledTable}>
       <Typography variant="h5" className={classes.styledTableHeader}>
